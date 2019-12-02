@@ -1,1 +1,1 @@
-My portfolio site built with GatsbyJS and grapgQL.
+My portfolio site built with GatsbyJS and graphQL.
