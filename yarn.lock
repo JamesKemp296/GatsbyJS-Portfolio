@@ -742,6 +742,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
+  integrity sha512-r24eVUUr0QqNZa+qrImUk8fn5SPhHq+IfYvIoIMg0do3GdK9sMdiLKP3GYVVaxpPKORgm8KRKaNTEhAjgIpLMw==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.7.0":
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.7.0.tgz#4fadc1b8e734d97f56de39c77de76f2562e597d0"
@@ -5334,6 +5341,14 @@ gatsby-telemetry@^1.1.36:
     stack-trace "^0.0.10"
     stack-utils "1.0.2"
     uuid "3.3.3"
+
+gatsby-transformer-json@^2.2.20:
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.2.20.tgz#759e31b0ebbfdfa2cf3a363490ffb1ec7e2a2d72"
+  integrity sha512-bUT1/AEUp6IXJVdOYb+A0TONO1RK4Ijyvd98vCIHUlWxB3M1bNiE9Du0nYnG4RUbZFfc1V8Oqj+vP57nMXVmJA==
+  dependencies:
+    "@babel/runtime" "^7.7.4"
+    bluebird "^3.7.1"
 
 gatsby-transformer-sharp@^2.3.3:
   version "2.3.3"

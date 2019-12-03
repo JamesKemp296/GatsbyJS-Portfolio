@@ -27,6 +27,56 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <div
+        style={{
+          display: 'flex'
+        }}
+      >
+        <h1 style={{ margin: 0 }}>
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            Portfolio
+          </Link>
+        </h1>
+        <h1 style={{ margin: 0 }}>
+          <Link
+            to="/about"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            About
+          </Link>
+        </h1>
+        <h1 style={{ margin: 0 }}>
+          <Link
+            to="/skills"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            Skills
+          </Link>
+        </h1>
+        <h1 style={{ margin: 0 }}>
+          <Link
+            to="/contact"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            Contact
+          </Link>
+        </h1>
+      </div>
     </div>
   </header>
 )

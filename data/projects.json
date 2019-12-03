@@ -1,0 +1,23 @@
+[
+  {
+    "title": "GreenLink",
+    "slug": "greenlink",
+    "url": "http://thegreenlink.herokuapp.com/",
+    "image": "./images/greenlink.png",
+    "description": "We built this site to help reduce the total consumption of energy accross the state of florida."
+  },
+  {
+    "title": "Miami Contaminated Sites",
+    "slug": "miamicontaminatedsites",
+    "url": "http://miamicontaminatedsites.com/",
+    "image": "./images/miamicontaminatedsites.png",
+    "description": "We built this site to help miami dade residents stay informed about contamination in their area."
+  },
+  {
+    "title": "Calculator",
+    "slug": "calculator",
+    "url": "https://jameskemp296.github.io/Calculator-Vanilla-JavaScript/",
+    "image": "./images/calculator.png",
+    "description": "I built this calculator to challenge my knowledge of JavaScript."
+  }
+]
