@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import ProjectPrewview from '../components/project-preview'
 import SEO from "../components/seo"
 
+import "./index.css"
+
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -30,22 +32,31 @@ const IndexPage = () => {
   const projects = data.allProjectsJson.edges
   return(
     <Layout>
-      <SEO title="Home" />
-      <h1>What's up early bird, come back when the site is done!</h1>
-      {projects.map(({ node: project }) => {
-        const title = project.title
-        const description = project.description
-        const slug = project.slug
-        const imageData = project.image.childImageSharp.fluid
-        return(
-          <ProjectPrewview
-            title={title}
-            description={description}
-            imageData={imageData}
-            slug={slug}
-          />
-        )
-      })} 
+      <main className="portfoliomain">
+        <SEO title="Home" />
+        <div className="portfolio-hero-wrapper">
+          <div className="portfolio-hero">
+            <h1>Full-Stack Developer</h1>
+            <p>Lorum Ipsum and some more ipsum and something else. Also some more lorum but also some more ipsum and htat is all.</p>
+          </div>
+        </div>
+        <div class="project-grid">
+          {projects.map(({ node: project }) => {
+            const title = project.title
+            const description = project.description
+            const slug = project.slug
+            const imageData = project.image.childImageSharp.fluid
+            return(
+              <ProjectPrewview
+                title={title}
+                description={description}
+                imageData={imageData}
+                slug={slug}
+              />
+            )
+          })}
+        </div>
+      </main>
     </Layout>
   )
 }
