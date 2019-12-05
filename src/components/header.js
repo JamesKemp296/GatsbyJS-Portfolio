@@ -1,92 +1,35 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "./header.css"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+const Header = ({ siteTitle, subTitle }) => (
+  <header id="header-main">
+    <div id="navbar-main">
+      <div>
+        <Link to="/">
+          <h1 id="navbar-title">{siteTitle}</h1>
+          <h2 id="navbarsub-title">{subTitle}</h2>
         </Link>
-      </h1>
-      <div
-        style={{
-          display: 'flex'
-        }}
-      >
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            Portfolio
-          </Link>
-        </h1>
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/about"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            About
-          </Link>
-        </h1>
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/skills"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            Skills
-          </Link>
-        </h1>
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/contact"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            Contact
-          </Link>
-        </h1>
       </div>
+      <ul className="navbar-links">
+        <li><Link to="/">Portfolio</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/skills">Skills</Link></li>
+        <li><Link to="/contact" >Contact</Link></li>
+      </ul>
     </div>
   </header>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  subTitle: PropTypes.string
 }
 
 Header.defaultProps = {
   siteTitle: `James Kemp`,
+  subTitle: `Full-Stack Developer`
 }
 
 export default Header
