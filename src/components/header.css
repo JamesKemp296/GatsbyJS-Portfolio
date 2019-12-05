@@ -1,0 +1,36 @@
+#header-main {
+  background: transparent;
+  margin-bottom: 1.45rem;
+}
+
+#navbar-main {
+  margin: 0 auto;
+  max-Width: 960px;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar-title {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.navbar-links {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navbar-links li {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: none;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
