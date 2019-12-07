@@ -32,31 +32,30 @@ const IndexPage = () => {
   const projects = data.allProjectsJson.edges
   return(
     <Layout>
-      <main className="portfoliomain">
-        <SEO title="Home" />
-        <div className="portfolio-hero-wrapper">
-          <div className="portfolio-hero">
-            <h1>Full-Stack Developer</h1>
-            <p>Lorum Ipsum and some more ipsum and something else. Also some more lorum but also some more ipsum and htat is all.</p>
-          </div>
+      <SEO title="Home" />
+      <div className="portfolio-hero-wrapper">
+        <div className="portfolio-hero">
+          <h1>Full-Stack Developer</h1>
+          <p>Lorum Ipsum and some more ipsum and something else. Also some more lorum but also some more ipsum and htat is all.</p>
         </div>
-        <div class="project-grid">
-          {projects.map(({ node: project }) => {
-            const title = project.title
-            const description = project.description
-            const slug = project.slug
-            const imageData = project.image.childImageSharp.fluid
-            return(
-              <ProjectPrewview
-                title={title}
-                description={description}
-                imageData={imageData}
-                slug={slug}
-              />
-            )
-          })}
-        </div>
-      </main>
+      </div>
+      <div className="project-grid">
+        {projects.map(({ node: project }, i) => {
+          const title = project.title
+          const description = project.description
+          const slug = project.slug
+          const imageData = project.image.childImageSharp.fluid
+          return(
+            <ProjectPrewview
+              key={i}
+              title={title}
+              description={description}
+              imageData={imageData}
+              slug={slug}
+            />
+          )
+        })}
+      </div>
     </Layout>
   )
 }
