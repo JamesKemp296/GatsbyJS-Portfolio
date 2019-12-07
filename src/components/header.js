@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "./layout.css"
 import "./header.css"
 
 const Header = ({ siteTitle, subTitle }) => (
@@ -9,7 +10,7 @@ const Header = ({ siteTitle, subTitle }) => (
       <div>
         <Link to="/">
           <h1 id="navbar-title">{siteTitle}</h1>
-          <h2 id="navbarsub-title">{subTitle}</h2>
+          <h4 id="navbarsub-title">{subTitle}</h4>
         </Link>
       </div>
       <ul className="navbar-links">

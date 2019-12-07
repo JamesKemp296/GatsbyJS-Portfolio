@@ -7,10 +7,15 @@ const About = () => (
   <Layout>
     <SEO title="About" />
     <main>
-      <h1>About Page</h1>
-      <p>
-        Lorupm sdf tewgadgasdg gaefgc gafdg argadfk this is t0smething ahtat cna be explained relly easily and there is something about this that I can not understand so I will look up another tutorial and oh god my css is horrid and I really need tot take another tutorial.
-      </p>
+      <article>
+        <header className="about-header">
+          <h1>About James</h1>
+          <h2>Building high-quality websites with robust backends</h2>
+        </header>
+        <div className="about-content">
+          <p>Placeholder Text</p>
+        </div>
+      </article>
     </main>
   </Layout>
 )
