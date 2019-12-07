@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
   grid-gap: 2rem;
-  margin: 0 2rem;
+  margin: 0;
 }
 
 .portfolio-hero-wrapper {

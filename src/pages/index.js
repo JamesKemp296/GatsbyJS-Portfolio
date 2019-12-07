@@ -32,11 +32,13 @@ const IndexPage = () => {
   const projects = data.allProjectsJson.edges
   return(
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Portfolio" />
       <div className="portfolio-hero-wrapper">
         <div className="portfolio-hero">
           <h1>Full-Stack Developer</h1>
-          <p>Lorum Ipsum and some more ipsum and something else. Also some more lorum but also some more ipsum and htat is all.</p>
+          <p>
+            Creating beautiful, highly interactive user interfaces in ReactJS with powerful and robust backends.
+          </p>
         </div>
       </div>
       <div className="project-grid">
