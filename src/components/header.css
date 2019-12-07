@@ -6,7 +6,7 @@
 #navbar-main {
   margin: 0 auto;
   max-Width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 3rem;
   display: flex;
   justify-content: space-between;
 }
@@ -14,6 +14,12 @@
 #navbar-title {
   margin: 0;
   font-size: 2.5rem;
+  font-weight: 700;
+}
+
+#navbarsub-title {
+  margin: 0;
+  font-weight: 200;
 }
 
 .navbar-links {
