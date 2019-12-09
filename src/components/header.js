@@ -18,14 +18,16 @@ const Header = ({ siteTitle, subTitle }) => {
             <h4 id="navbarsub-title">{subTitle}</h4>
           </Link>
         </div>
-        <div
+        <a
+          href="#0"
           className="toggle-button"
           onClick={() => setToggled(!isToggled)}
+          onKeyDown={() => setToggled(!isToggled)}
         >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
-        </div>
+        </a>
         <Links isToggled={isToggled}/>
       </div>
     </header>

@@ -63,9 +63,11 @@ a {
   #navbar-title {
     font-size: 2.3rem;
   }
+
   #navbarsub-title {
     font-size: 2.1rem;
   }
+
   .navbar-links li {
     padding-left: 18px;
     font-size: 1.9rem;
@@ -74,11 +76,20 @@ a {
 }
 
 @media only screen and (max-width: 720px) {
+  #navbar-title {
+    font-size: 1.7rem;
+  }
+
+  #navbarsub-title {
+    font-size: 1.5rem;
+  }
+
   .toggle-button {
     display: flex;
   }
 
   .navbar-links {
+    margin-top: 1rem;;
     display: none;
     width: 100%;
   }
