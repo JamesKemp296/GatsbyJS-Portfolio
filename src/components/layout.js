@@ -23,13 +23,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={title} subTitle={subTitle} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `1000px`,
-          padding: `0 3rem`,
-        }}
-      >
+      <div id="main-content">
         <main>{children}</main>
       </div>
       <footer>
