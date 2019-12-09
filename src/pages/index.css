@@ -23,3 +23,38 @@
 .portfolio-hero p {
   font-size: 2rem;
 }
+
+@media only screen and (max-width: 840px) {
+  .portfolio-hero {
+    max-width: 500px;
+  }
+  .portfolio-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .portfolio-hero p {
+    font-size: 1.8rem;
+  }
+
+  .portfolio-hero-wrapper {
+    height: calc(70vh - 100px);
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .portfolio-hero {
+    max-width: 450px;
+  }
+
+  .portfolio-hero h1 {
+    font-size: 3rem;
+  }
+
+  .portfolio-hero p {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-hero-wrapper {
+    height: calc(50vh - 100px);
+  }
+}
