@@ -7,7 +7,7 @@ import "./layout.css"
 import "./header.css"
 
 const Header = ({ siteTitle, subTitle }) => {
-  const [isToggled, setToggled] = useState(true)
+  const [isToggled, setToggled] = useState(false)
 
   return(
     <header id="header-main">
