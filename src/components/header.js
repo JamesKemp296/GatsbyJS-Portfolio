@@ -1,27 +1,36 @@
+import { useState } from 'react'
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Links from './links'
 import "./layout.css"
 import "./header.css"
 
-const Header = ({ siteTitle, subTitle }) => (
-  <header id="header-main">
-    <div id="navbar-main">
-      <div>
-        <Link to="/">
-          <h1 id="navbar-title">{siteTitle}</h1>
-          <h4 id="navbarsub-title">{subTitle}</h4>
-        </Link>
+const Header = ({ siteTitle, subTitle }) => {
+  const [isToggled, setToggled] = useState(true)
+
+  return(
+    <header id="header-main">
+      <div id="navbar-main">
+        <div>
+          <Link to="/">
+            <h1 id="navbar-title">{siteTitle}</h1>
+            <h4 id="navbarsub-title">{subTitle}</h4>
+          </Link>
+        </div>
+        <div
+          className="toggle-button"
+          onClick={() => setToggled(!isToggled)}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <Links isToggled={isToggled}/>
       </div>
-      <ul className="navbar-links">
-        <li><Link to="/">Portfolio</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/skills">Skills</Link></li>
-        <li><Link to="/contact" >Contact</Link></li>
-      </ul>
-    </div>
-  </header>
-)
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
