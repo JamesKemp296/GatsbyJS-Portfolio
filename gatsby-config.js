@@ -14,6 +14,13 @@ module.exports = {
         path: `${__dirname}/data`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `profile`,
+        path: `${__dirname}/data/profile`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
