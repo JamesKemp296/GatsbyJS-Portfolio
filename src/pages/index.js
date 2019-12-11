@@ -41,6 +41,10 @@ const IndexPage = () => {
           </p>
         </div>
       </div>
+      <div id="portfolio-button">
+        <h5 id="portfolio-button-text">VIEW PORTFOLIO</h5>
+        <h4 id="portfolio-button-chevron">&#xFE40;</h4>
+      </div>
       <div className="project-grid">
         {projects.map(({ node: project }, i) => {
           const title = project.title
