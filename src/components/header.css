@@ -11,6 +11,10 @@
   justify-content: space-between;
 }
 
+#navbar-title-group{
+  max-width: 300px;
+}
+
 #navbar-title {
   margin: 0;
   font-size: 2.5rem;
@@ -68,8 +72,9 @@ a {
 
 .toggle-button {
   position: absolute;
-  top: 2.2rem;
-  right: 2rem;
+  top: 1.2rem;
+  right: 0;
+  padding: 2rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -123,7 +128,7 @@ a {
   #navbar-main {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 3rem 0 0 0;
   }
 
   #navbar-title-group {
@@ -150,5 +155,9 @@ a {
 
   .navbar-links li a[aria-current="page"]{
     border-bottom: none;
+  }
+
+  #navbar-title-group{
+    max-width: 180px;
   }
 }

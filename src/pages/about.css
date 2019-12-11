@@ -2,6 +2,7 @@
   display: grid;
   place-items: center;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .about-header h1 {
@@ -24,10 +25,43 @@
   color: black;
 }
 
-.profile {
-  width: 150px;
+.about-container {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 0 3rem;
 }
 
 #about-summary {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#about-summary p {
+  margin-left: 3rem;
+  margin-top: 0;
+  line-height: 2.5rem;
+}
+
+.about-skills li {
+  line-height: 3rem;
+}
+
+.paragraph {
+  margin-top: 3rem;
+  line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  #about-summary {
+    display: block;
+  }
+  #profile-image {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  #about-summary p {
+    margin-left: 0;
+  }
 }

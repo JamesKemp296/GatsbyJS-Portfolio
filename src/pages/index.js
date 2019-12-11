@@ -31,32 +31,20 @@ const IndexPage = () => {
   `)
 
   const projects = data.allProjectsJson.edges
+  const hero = "Full-Stack Developer"
+  const split = hero.split("")
   return(
     <Layout>
       <SEO title="Portfolio" />
       <div className="container">
         <div className="portfolio-hero-wrapper">
           <div className="portfolio-hero">
-            <div className="wiggle-flex">
-              <h1 className="wiggle">F</h1>
-              <h1 className="wiggle">u</h1>
-              <h1 className="wiggle">l</h1>
-              <h1 className="wiggle">l</h1>
-              <h1 className="wiggle">-</h1>
-              <h1 className="wiggle">S</h1>
-              <h1 className="wiggle">t</h1>
-              <h1 className="wiggle">a</h1>
-              <h1 className="wiggle">c</h1>
-              <h1 className="wiggle">k</h1>
-              <h1 className="wiggle">&nbsp;D</h1>
-              <h1 className="wiggle">e</h1>
-              <h1 className="wiggle">v</h1>
-              <h1 className="wiggle">e</h1>
-              <h1 className="wiggle">l</h1>
-              <h1 className="wiggle">o</h1>
-              <h1 className="wiggle">p</h1>
-              <h1 className="wiggle">e</h1>
-              <h1 className="wiggle">r</h1>
+          <div className="wiggle-flex">
+              {
+                split.map(letter => (
+                  <h1 className="wiggle">{letter === " " ? "\xa0" : letter}</h1>
+                ))
+              }
             </div>
             <p>
               Creating beautiful, highly interactive user interfaces in ReactJS with powerful and robust backends.
