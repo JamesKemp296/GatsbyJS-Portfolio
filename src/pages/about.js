@@ -20,7 +20,7 @@ const About = () => (
               <img className="profile" src={profile} alt="James Kemp"/>
               <p>a sdgadfgadfgdfgjasndf SDFJUIOSDfljSD SDjfiSDLF alijsdfljknasdf asdlknl;asdr lksdf na sdflkjasd aslkdfb asd falksdjf df a;kjsdfn; a sdfa sdfkjadsf asdfs ji</p>
             </div>
-            <div classname="about-skills">
+            <div className="about-skills">
               <ul>
                 <li>Responsive HTML/CSS</li>
                 <li>JavaScript</li>

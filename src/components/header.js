@@ -12,14 +12,14 @@ const Header = ({ siteTitle, subTitle }) => {
   return(
     <header id="header-main">
       <div id="navbar-main">
-        <div>
+        <div id="navbar-title-group">
           <Link to="/">
             <h1 id="navbar-title">{siteTitle}</h1>
             <h4 id="navbarsub-title">{subTitle}</h4>
           </Link>
         </div>
         <a
-          href="#0"
+          href="#menu"
           className="toggle-button"
           onClick={() => setToggled(!isToggled)}
           onKeyDown={() => setToggled(!isToggled)}

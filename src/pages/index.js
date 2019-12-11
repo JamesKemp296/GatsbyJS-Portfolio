@@ -48,7 +48,7 @@ const IndexPage = () => {
               <h1 className="wiggle">a</h1>
               <h1 className="wiggle">c</h1>
               <h1 className="wiggle">k</h1>
-              <h1 className="wiggle"> D</h1>
+              <h1 className="wiggle">&nbsp;D</h1>
               <h1 className="wiggle">e</h1>
               <h1 className="wiggle">v</h1>
               <h1 className="wiggle">e</h1>
@@ -68,24 +68,22 @@ const IndexPage = () => {
           <h4 id="portfolio-button-chevron">&#xFE40;</h4>
         </div>
       </div>
-      <div className="container">
-        <div className="project-grid">
-          {projects.map(({ node: project }, i) => {
-            const title = project.title
-            const description = project.description
-            const slug = project.slug
-            const imageData = project.image.childImageSharp.fluid
-            return(
-              <ProjectPrewview
-                key={i}
-                title={title}
-                description={description}
-                imageData={imageData}
-                slug={slug}
-              />
-            )
-          })}
-        </div>
+      <div className="project-grid">
+        {projects.map(({ node: project }, i) => {
+          const title = project.title
+          const description = project.description
+          const slug = project.slug
+          const imageData = project.image.childImageSharp.fluid
+          return(
+            <ProjectPrewview
+              key={i}
+              title={title}
+              description={description}
+              imageData={imageData}
+              slug={slug}
+            />
+          )
+        })}
       </div>
     </Layout>
   )
