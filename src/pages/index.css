@@ -125,7 +125,7 @@
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(0deg), scale(2); }
+  0% { transform: rotate(0deg), scale(3); }
  25% { transform: rotate(15deg); }
  50% { transform: rotate(-15deg); }
  75% { transform: rotate(15deg); }
@@ -133,7 +133,7 @@
 }
 
 .wiggle:hover {
-  transform: scale(1.5);
+  transform: scale(1.8);
   transition: 0.3s;
   animation: wiggle 1s infinite;
 }
