@@ -48,7 +48,7 @@ a {
   padding-bottom: 1rem;
 }
 
-a::after {
+.navbar-links a::after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -61,7 +61,7 @@ a::after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-a:hover:after {
+.navbar-links a:hover:after {
   width: 100%;
   left: 0;
 }

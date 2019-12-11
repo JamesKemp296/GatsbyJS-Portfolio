@@ -19,7 +19,7 @@ const Header = ({ siteTitle, subTitle }) => {
           </Link>
         </div>
         <a
-          href="#0"
+          href="#menu"
           className="toggle-button"
           onClick={() => setToggled(!isToggled)}
           onKeyDown={() => setToggled(!isToggled)}
