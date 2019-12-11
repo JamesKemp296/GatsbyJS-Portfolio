@@ -75,6 +75,7 @@ a {
   justify-content: space-between;
   width: 31px;
   height: 21px;
+  z-index: 2;
 }
 
 .toggle-button .bar {
