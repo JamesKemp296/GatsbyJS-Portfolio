@@ -11,8 +11,8 @@
   justify-content: space-between;
 }
 
-#navbar-title{
-  max-width: 150px;
+#navbar-title-group{
+  max-width: 300px;
 }
 
 #navbar-title {
@@ -155,5 +155,9 @@ a {
 
   .navbar-links li a[aria-current="page"]{
     border-bottom: none;
+  }
+
+  #navbar-title-group{
+    max-width: 180px;
   }
 }
