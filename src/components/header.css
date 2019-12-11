@@ -32,13 +32,38 @@
   margin: 0;
   padding-left: 20px;
   list-style-type: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-links li a[aria-current="page"]{
+  border-bottom: 2px solid white;
 }
 
 a {
   color: white;
   text-decoration: none;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  margin-top:  2px;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 .toggle-button {
@@ -70,7 +95,7 @@ a {
 
   .navbar-links li {
     padding-left: 18px;
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     font-family: sans-serif;
   }
 }
@@ -113,5 +138,9 @@ a {
 
   .navbar-links.active {
     display: flex;
+  }
+
+  .navbar-links li a[aria-current="page"]{
+    border-bottom: none;
   }
 }
