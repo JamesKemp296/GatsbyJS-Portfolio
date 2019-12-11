@@ -32,7 +32,7 @@
   margin: 0;
   padding-left: 20px;
   list-style-type: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: sans-serif;
   text-transform: uppercase;
 }
@@ -45,7 +45,7 @@ a {
   color: white;
   text-decoration: none;
   position: relative;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 a::after {
@@ -95,7 +95,7 @@ a:hover:after {
 
   .navbar-links li {
     padding-left: 18px;
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     font-family: sans-serif;
   }
 }
@@ -138,5 +138,9 @@ a:hover:after {
 
   .navbar-links.active {
     display: flex;
+  }
+
+  .navbar-links li a[aria-current="page"]{
+    border-bottom: none;
   }
 }

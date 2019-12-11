@@ -65,7 +65,7 @@ a {
   font-weight: bold;
 }
 
-#main-content {
+.container {
   margin: 0 auto;
   max-width: 1080px;
   padding: 0 3rem;
