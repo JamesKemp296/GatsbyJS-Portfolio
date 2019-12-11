@@ -1,7 +1,6 @@
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 2fr));
   margin: 0;
 }
 
@@ -56,6 +55,22 @@
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1200px) {
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+    margin: 0;
+  }
+}
+
 @media only screen and (max-width: 840px) {
   .portfolio-hero {
     max-width: 500px;
@@ -74,6 +89,9 @@
 }
 
 @media only screen and (max-width: 720px) {
+  .portfolio-hero-wrapper {
+    max-height: 20rem;
+  }
   .portfolio-hero {
     max-width: 450px;
   }
@@ -84,6 +102,7 @@
 
   .portfolio-hero p {
     font-size: 1.5rem;
+    margin-top: 0;
   }
 
   .portfolio-hero-wrapper {
