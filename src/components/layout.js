@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={title} subTitle={subTitle} />
-      <div id="main-content">
+      <div>
         <main>{children}</main>
       </div>
       <footer>
