@@ -3,14 +3,42 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import './github.css'
 
-const Skills = () => (
-  <Layout>
-    <SEO title="Skills" />
-    <div className="cool-stuff">
-      <h1>Placeholder text</h1>
-      <p>Mad Skillz</p>
-    </div>
-  </Layout>
-)
+class Github extends React.Component {
+  state = {
+    github: {},
+    repos: []
+  }
+  fetchGithub = () => {
+    fetch(`https://api.github.com/users/JamesKemp296`)
+    .then(res => res.json())
+    .then(data => this.setState({ github: data }))
+  }
 
-export default Skills
+  fetchRepos = () => {
+    fetch(`https://api.github.com/users/JamesKemp296/repos`)
+    .then(res => res.json())
+    .then(data => this.setState({ repos: data }))
+  }
+
+  render(){
+    console.log(repos)
+    console.log(github)
+    return(
+      <Layout>
+        <SEO title="Github" />
+        <div className="cool-stuff">
+          <h1>Placeholder text</h1>
+          <p>Mad Skillz</p>
+        </div>
+      </Layout>
+    )
+  }
+
+  // componentDidMount(){
+  //   this.fetchGithub()
+  //   this.fetchRepos()
+  // }
+}
+
+
+export default Github
