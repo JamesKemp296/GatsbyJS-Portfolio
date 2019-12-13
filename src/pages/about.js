@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Image from 'gatsby-image'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import '../components/layout.css'
+import "../globals.css"
 import "./about.css"
 
 const About = () => {
@@ -33,12 +33,12 @@ const About = () => {
       <SEO title="About" />
       <main>
         <article>
-          <header className="about-header">
+          <header className="head-container">
             <h1>About James</h1>
             <h2>Building high-quality websites with robust backends</h2>
           </header>
-          <div className="about-content">
-            <div className="about-container">
+          <div className="page-content">
+            <div className="page-container">
               <div id="about-summary">
                 <div id="profile-image">
                   <Image

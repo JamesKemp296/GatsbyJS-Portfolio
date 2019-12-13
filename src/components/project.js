@@ -1,7 +1,7 @@
 import React from 'react'
 import SEO from "../components/seo"
 import Image from 'gatsby-image'
-import "./project.css"
+import "../globals.css"
 
 const Project = ({ title, description, tech, github, url, imageData }) => (
   <>

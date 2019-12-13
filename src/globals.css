@@ -64,6 +64,8 @@ small, .text_small {font-size: 0.8em;}
 a {
   font-weight: bold;
 }
+/*
+=====================CONTAINERS================== */
 
 .container {
   margin: 0 auto;
@@ -71,29 +73,51 @@ a {
   padding: 0 3rem;
 }
 
+.head-container {
+  display: grid;
+  place-items: center;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.head-container h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 3rem 0 0 0;
+  padding: 0;
+}
+
+.head-container h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem 0 0 0;
+}
+
+.page-content {
+  width: 100%;
+  padding: 3rem 0;
+  background: white;
+  color: black;
+}
+
+.page-container {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 0 3rem;
+}
+
+/* =========================FOOTER====================== */
+
 footer {
   background: #222222;
-  padding-bottom: 1.5rem;
-}
-
-.footer-outer {
-  max-width: 1080px;
-  padding: 0 3rem;
-  margin: 0 auto;
-}
-
-.footer-wrapper {
+  padding: 1.5rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  place-items: center;
 }
 
-.footer-bio {
-  font-size: 1.4rem;
-  max-width: 40vw;
-}
-
-.footer-links {
-  max-width: 40vw;
+.footer-links a {
+  margin: 3rem;
 }
 
 .footer-bottom {

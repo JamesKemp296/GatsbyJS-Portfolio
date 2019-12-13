@@ -1,19 +1,19 @@
 import React from "react"
-import "./contact.css"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "./contact.css"
+import "../globals.css"
 
 const Contact = () => (
   <Layout>
     <SEO title="Contact" />
-    <div className="contact-header">
+    <div className="head-container">
       <h1>Contact James</h1>
       <h2>Send me a message</h2>
     </div>
-    <div className="contact-content">
-      <div className="contact-container">
-        <h5>About You</h5>
+    <div className="page-content">
+      <div className="page-container">
+        <h5 className="about-you">About You</h5>
         <form
           name="contact"
           method="post"
