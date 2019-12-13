@@ -46,6 +46,16 @@
   line-height: 3rem;
 }
 
+#about-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#about-skills-list h5 {
+  margin: 2rem 4rem;
+}
+
 .paragraph {
   margin-top: 3rem;
   line-height: 2.5rem;

@@ -26,7 +26,6 @@ const About = () => {
     }
   `)
   const profile = data.allProfileJson.edges[0].node
-  console.log(profile)
   const title = profile.title
   const imageData = profile.image.childImageSharp.fluid
   return (
@@ -52,29 +51,25 @@ const About = () => {
               </div>
               <div className="about-skills">
                 <h5>Some of my skills are:</h5>
-                <ul>
-                  <li>Responsive HTML/CSS</li>
-                  <li>JavaScript</li>
-                  <li>ReactJS</li>
-                  <li>GatsbyJS</li>
-                  <li>NodeJS</li>
-                  <li>ExpressJS</li>
-                  <li>Ruby on Rails</li>
-                  <li>MongoDB</li>
-                  <li>GraphQL</li>
-                  <li>MySQL</li>
-                  <li>Git/Github</li>
-                </ul>
+                <div id="about-skills-list">
+                  <h5>HTML/CSS</h5>
+                  <h5>JavaScript</h5>
+                  <h5>ReactJS</h5>
+                  <h5>GatsbyJS</h5>
+                  <h5>NodeJS</h5>
+                  <h5>ExpressJS</h5>
+                  <h5>Ruby on Rails</h5>
+                  <h5>MongoDB</h5>
+                  <h5>GraphQL</h5>
+                  <h5>MySQL</h5>
+                  <h5>Git/Github</h5>
+                </div>
+                <p className="paragraph">My name is James Kemp and I am a career changer. I have spent the last 4 years as a chef at Margaritaville. I had a design to find more fullfilling and creative work. During my search I found myself at Wyncode Academy.</p>
+                <p className="paragraph">During my time at Wyncode, I've struggled and worked my way at learnig a new skillset to launch my career in tech. I've developed a passion for coding and have developed an interest in modern web technologies such was React and GraphQL.</p>
                 <p className="paragraph">I pride myself on producing the highest quality of work possible. I have a passion for continuing my learing and pushing the boundries of my knowledge.</p>
-                <p className="paragraph">efkgnfdgjkaarfasdfae fgasd adfasdf asgasdgasdgsdgasgsdgasgsadasdfsdfasdf adsf asdf asdfajfasdfjkassdg ajgafdjragiafgragiaghafg aigagrgisdgargasgafdgafg eidfiasdfnasdf weifasdhfa efiasdfnasgaig</p>
-                <p className="paragraph">wergkweg werg ewrgksdfg rgkfg rgkrg rgrogfoge eegdgetegd etoegewkasdf eog eroefenfekegofg rg grognegoegn gegoegneeoreofe egogneteogegnetoe ne eognegeognege</p>
                 <h2>Full Stack Developer</h2>
-                <p className="paragraph">asdfgjkasdfasdfasdfasdfasd fasd fasdfasdfbasdfasdfasd fasdjfbasdf asdjbergfg gfgfgfgfgfg fefasvrtgqrgadfgasdfasdf adsfasdfasdf asf asdf asdfasdfasdf eryadgfg rgafdgaasd faf adsfadsfadsfa dsfadsf adsf adsf afdag regdfg rgfg arega gar ga gar </p>
-                <p className="paragraph">asdfgjkasdfasdfasdfasdfasd fasd fasdfasdfbasdfasdfasd fasdjfbasdf asdjbergfg gfgfgfgfgfg fefasvrtgqrgadfg eryadgfg rgafdgag regdfg rgfg arasdf asdf adsfadsfadfadsfa dsf asdfasdfadf adsf adf ad fadf adsfadsf adsfadsf adsf adsfega gar ga gar </p>
-                <h2>ReactJS</h2>
-                <p className="paragraph">asdfgjkasdfasdfasdfasdfasd fasd fasdfasdfbasdfasdfasd fasdjfbasdf asdjbergfg gfgfgfgfgfg fefasvrtgqrgadfg erasdfas dfasdfasdf asdfaf asdf asdf asdfa sdfasdfadfadf adfads fasdfasdfyadgfg rgafdgag regdfg rgfg arega gar ga gar </p>
-                <p className="paragraph">asdfgjkasdfasdfasdfasdfasd fasd fasdfasdfbasdfasdfasd fasdjfbasdf asdjbergfg gfgfgfgfgfg fefasvrtgqrgadfg eryadgfg rgafdgag regdfg rgfg area sdfasdf asdf asdf asdf asdfa sdf asdfga gar ga gar </p>
-                <p className="paragraph">asdfgjkasdfasdfasdfasdfasd fasd fasdfasdfbasdfasdfasd fasdjfbasdf asdjbergfg gfgfgfgfgfg fefasvrtgqrgadfg eryadgfg rgafdgag regdfg rgfg adf adfasdf adsf adf adf asf adf adfarega gar ga gar </p>
+                <p className="paragraph">Being a Full Stack Developer means I am capable of building sites that both look fantastic and have fleshed out datamodels on the backend. On the frontend, my primary library of choice is React with some minor experience in Angular. </p>
+                <p className="paragraph">Backend technologies that I have worked in are Ruby on Rails with a PostgreSQL database, expressJS with a mongodb database, and Apollo with Prisma and a MySQL database.</p>
               </div>
             </div>
           </div>
