@@ -1,15 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import './skills.css'
 
 const Skills = () => (
   <Layout>
     <SEO title="Skills" />
-    <h1>Hi from the skills page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <div className="cool-stuff">
+      <h1>Placeholder text</h1>
+      <p>Mad Skillz</p>
+    </div>
   </Layout>
 )
 
