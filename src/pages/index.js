@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import ProjectPrewview from '../components/project-preview'
 import SEO from "../components/seo"
 
-import '../components/layout.css'
+import "../globals.css"
 import "./index.css"
 
 const IndexPage = () => {

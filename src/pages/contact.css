@@ -1,43 +1,10 @@
-.contact-header {
-  display: grid;
-  place-items: center;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.contact-header h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  margin: 3rem 0 0 0;
-  padding: 0;
-}
-
-.contact-header h2 {
-  font-size: 2rem;
-  margin: 0;
-  padding: 1rem 0 0 0;
-}
-
-.contact-content {
-  width: 100%;
-  padding: 3rem 0;
-  background: white;
-  color: black;
-}
-
-.contact-container {
-  margin: 0 auto;
-  max-width: 720px;
-  padding: 0 3rem;
-}
-
 .contact-form {
   display: grid;
   place-items: center;
   margin-top: 2rem;
 }
 
-.contact-container h5 {
+.about-you {
   font-weight: bold;
   font-size: 1.6rem;
 }
