@@ -6,10 +6,9 @@ const DarkButton = styled.button`
   text-transform: uppercase;
   font-weight: bold;
   box-shadow: 3px 3px 7px 1px rgba(50, 50, 50, 0.75);
-  height: 60px;
-  width: 60px;
+  width: 6rem;
+  padding: 1rem;
   border: 0;
-  border-radius: 100%;
   position: fixed;
   bottom: 4rem;
   right: 4rem;
