@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { PageContent, PageContainer, HeadContainer, HeadMainText, HeadSubText } from '../styled/Page'
 import Image from 'gatsby-image'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -33,12 +34,12 @@ const About = () => {
       <SEO title="About" />
       <main>
         <article>
-          <header className="head-container">
-            <h1>About James</h1>
-            <h2>Building high-quality websites with robust backends</h2>
-          </header>
-          <div className="page-content">
-            <div className="page-container">
+          <HeadContainer>
+            <HeadMainText>About James</HeadMainText>
+            <HeadSubText>Building high-quality websites with robust backends</HeadSubText>
+          </HeadContainer>
+          <PageContent>
+            <PageContainer>
               <div id="about-summary">
                 <div id="profile-image">
                   <Image
@@ -71,8 +72,8 @@ const About = () => {
                 <p className="paragraph">Being a Full Stack Developer means I am capable of building sites that both look fantastic and have fleshed out datamodels on the backend. On the frontend, my primary library of choice is React with some minor experience in Angular. </p>
                 <p className="paragraph">Backend technologies that I have worked in are Ruby on Rails with a PostgreSQL database, expressJS with a mongodb database, and Apollo with Prisma and a MySQL database.</p>
               </div>
-            </div>
-          </div>
+            </PageContainer>
+          </PageContent>
         </article>
       </main>
     </Layout>
