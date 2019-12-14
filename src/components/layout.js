@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import DarkButton from '../styled/DarkButton'
+// import DarkButton from '../styled/DarkButton'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import Header from "./header"
 import "../globals.css"
@@ -53,8 +53,8 @@ const Layout = ({ children }) => {
     }
     #message {
       background: ${props => (isDark ? '#183549' : 'white')};
-      border: ${props => (isDark ? '1px solid #96F1F2 ' : '')};
-      color: ${props => (isDark ? '#96F1F2' : '1px solid grey')};
+      border: ${props => (isDark ? '1px solid #96F1F2 ' : '1px solid grey')};
+      color: ${props => (isDark ? '#96F1F2' : '')};
     }
   `
 
@@ -67,12 +67,26 @@ const Layout = ({ children }) => {
           {children}
         </main>
       </div>
-      <DarkButton
+      {/* <DarkButton
         onClick={() => setDark(!isDark)}
       >
         {isDark ? 'Day' : 'Night'}
-      </DarkButton>
+      </DarkButton> */}
       <footer>
+        <div className="footer-resume">
+          <div>
+            Download my <a>Resume</a>
+          </div>
+          <div>|</div>
+          <div>
+          <button
+            className="footer-dark"
+            onClick={() => setDark(!isDark)}
+          >
+            Experimental {isDark ? 'Day' : 'Night'} Mode
+          </button>
+          </div>
+        </div>
         <div className="footer-links">
           <a href="https://twitter.com/jkempdev" target="_blank" rel="noopener noreferrer">Twitter</a>
           <a href="https://github.com/JamesKemp296" target="_blank" rel="noopener noreferrer">Github</a>
