@@ -1,18 +1,19 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { PageContent, PageContainer, HeadContainer, HeadMainText, HeadSubText } from '../styled/Page'
 import "./contact.css"
 import "../globals.css"
 
 const Contact = () => (
   <Layout>
     <SEO title="Contact" />
-    <div className="head-container">
-      <h1>Contact James</h1>
-      <h2>Send me a message</h2>
-    </div>
-    <div className="page-content">
-      <div className="page-container">
+    <HeadContainer>
+      <HeadMainText>Contact James</HeadMainText>
+      <HeadSubText>Send me a message</HeadSubText>
+    </HeadContainer>
+    <PageContent>
+      <PageContainer>
         <h5 className="about-you">About You</h5>
         <form
           name="contact"
@@ -44,8 +45,8 @@ const Contact = () => (
             </li>
           </ul>
         </form>
-      </div>
-    </div>
+      </PageContainer>
+    </PageContent>
   </Layout>
 )
 

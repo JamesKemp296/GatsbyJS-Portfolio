@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400|Poppins:400');
 
+:root {
+  --main-bg-color: #3B98D1;
+  --dark-main-bg-color: rgb(19, 32, 59);
+  --content-bg-color: white;
+  --dark-content-bg-color: #183549;
+  --font-white: white;
+  --font-dark: #96F1F2;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -15,7 +24,6 @@ body {
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #3B98D1;
   /* background: linear-gradient(270deg, #13828a, #7e4ed4);
   background-size: 400% 400%;
   animation: background-gradient 30s ease infinite;

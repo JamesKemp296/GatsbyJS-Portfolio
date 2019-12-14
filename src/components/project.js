@@ -2,17 +2,19 @@ import React from 'react'
 import SEO from "../components/seo"
 import Image from 'gatsby-image'
 import "../globals.css"
+import { PageContent, PageContainer, HeadContainer, HeadMainText, HeadSubText } from '../styled/Page'
+
 
 const Project = ({ title, description, tech, github, url, imageData }) => (
   <>
     <SEO title={title} />
     <div className="project">
-      <header className="project-header">
-        <h1>{title}</h1>
-        <h2>Subheader will go here, I'll make one</h2>
-      </header>
-      <div className="project-content">
-        <div className="project-container">
+      <HeadContainer>
+        <HeadMainText>{title}</HeadMainText>
+        <HeadSubText>Subheader will go here, I'll make one</HeadSubText>
+      </HeadContainer>
+      <PageContent>
+        <PageContainer>
           <Image fluid={imageData} alt={title}/>
           <p>{description}</p>
           <p>Tech used: {tech}</p>
@@ -22,8 +24,8 @@ const Project = ({ title, description, tech, github, url, imageData }) => (
           <p>
             <a href={github} target="_blank" rel="noopener noreferrer">View this project on github</a>
           </p>
-        </div>
-      </div>
+        </PageContainer>
+      </PageContent>
     </div>
   </>
 )
