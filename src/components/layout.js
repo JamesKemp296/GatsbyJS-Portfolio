@@ -1,18 +1,23 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import DarkButton from '../styled/DarkButton'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import Header from "./header"
 import "../globals.css"
 
 const light = {
   bgMain: '#3B98D1',
+  btnBackground: '#183549',
+  btnFont: '#96F1F2',
   contentMain: 'white',
   fontColor: 'black',
 }
 
 const dark = {
   bgMain: '#4B83FF',
+  btnBackground: 'white',
+  btnFont: 'black',
   contentMain: '#183549',
   fontColor: '#96F1F2',
 }
@@ -44,12 +49,12 @@ const Layout = ({ children }) => {
     input {
       background: ${props => (isDark ? '#183549' : 'white')};
       border: ${props => (isDark ? '1px solid #96F1F2 ' : '1px solid grey')};
-      color: ${props => (isDark ? '#96F1F2 ' : '')};
+      color: ${props => (isDark ? '#96F1F2' : '')};
     }
     #message {
       background: ${props => (isDark ? '#183549' : 'white')};
       border: ${props => (isDark ? '1px solid #96F1F2 ' : '')};
-      color: ${props => (isDark ? '#96F1F2 ' : '1px solid grey')};
+      color: ${props => (isDark ? '#96F1F2' : '1px solid grey')};
     }
   `
 
@@ -62,12 +67,11 @@ const Layout = ({ children }) => {
           {children}
         </main>
       </div>
-      <button
-        id="dark-mode-btn"
+      <DarkButton
         onClick={() => setDark(!isDark)}
       >
-        Dark Mode
-      </button>
+        {isDark ? 'Day' : 'Night'}
+      </DarkButton>
       <footer>
         <div className="footer-links">
           <a href="https://twitter.com/jkempdev" target="_blank" rel="noopener noreferrer">Twitter</a>

@@ -114,20 +114,6 @@ a {
   padding: 0 3rem;
 }
 
-/*======================DARK MODE===================== */
-
-#dark-mode-btn {
-  background: red;
-  height: 60px;
-  width: 60px;
-  border: 0;
-  border-radius: 100%;
-  position: fixed;
-  bottom: 5rem;
-  right: 5rem;
-  z-index: 5;
-}
-
 /* =========================FOOTER====================== */
 
 footer {
