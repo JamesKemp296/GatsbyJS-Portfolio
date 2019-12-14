@@ -30,6 +30,11 @@ body {
   -webkit-animation: background-gradient 30s ease infinite;
   -moz-animation: background-gradient 30s ease infinite; */
 }
+
+*:focus{
+  outline:none;
+}
+
 article,
 aside,
 details,
