@@ -30,6 +30,11 @@ body {
   -webkit-animation: background-gradient 30s ease infinite;
   -moz-animation: background-gradient 30s ease infinite; */
 }
+
+*:focus{
+  outline:none;
+}
+
 article,
 aside,
 details,
@@ -124,13 +129,31 @@ footer {
   place-items: center;
 }
 
+.footer-resume {
+  display: flex;
+  padding: 1rem;
+}
+.footer-resume div {
+  padding: 1rem;
+}
+
+.footer-dark {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0 0 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+}
+
 .footer-links a {
-  margin: 3rem;
+  margin: 2rem;
 }
 
 .footer-bottom {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 @keyframes background-gradient {
