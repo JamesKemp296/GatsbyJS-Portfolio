@@ -11,6 +11,7 @@ const light = {
   btnBackground: '#183549',
   btnFont: '#96F1F2',
   contentMain: 'white',
+  indexContent: '#183549',
   fontColor: 'black',
   border: '1px solid grey'
 }
@@ -20,6 +21,7 @@ const dark = {
   btnBackground: 'white',
   btnFont: 'black',
   contentMain: '#183549',
+  indexContent: '#183549',
   fontColor: '#96F1F2',
   border: '1px solid #96F1F2'
 }
@@ -77,7 +79,9 @@ const Layout = ({ children }) => {
       <footer>
         <div className="footer-resume">
           <div>
-            Download my <a href="#resume">Resume</a>
+            <a href="../../data/James_Kemp_Resume_2019.pdf" target="_blank" download>
+              Download my Resume
+            </a>
           </div>
           <div>|</div>
           <div>

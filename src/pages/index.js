@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from "../components/layout"
+import { IndexContent, IndexContainer } from '../styled/Page'
+import ResumeBtn from '../styled/ResumeBtn'
 import ProjectPrewview from '../components/project-preview'
 import SEO from "../components/seo"
 
@@ -49,6 +51,9 @@ const IndexPage = () => {
             <p>
               Creating beautiful, highly interactive user interfaces in ReactJS with powerful and robust backends.
             </p>
+            <a href="../../data/James_Kemp_Resume_2019.pdf" target="_blank" download>
+              <ResumeBtn>Download Resume</ResumeBtn>
+            </a>
           </div>
         </div>
         <div id="portfolio-button">
@@ -56,23 +61,27 @@ const IndexPage = () => {
           <h4 id="portfolio-button-chevron">&#xFE40;</h4>
         </div>
       </div>
-      <div className="project-grid">
-        {projects.map(({ node: project }, i) => {
-          const title = project.title
-          const description = project.description
-          const slug = project.slug
-          const imageData = project.image.childImageSharp.fluid
-          return(
-            <ProjectPrewview
-              key={i}
-              title={title}
-              description={description}
-              imageData={imageData}
-              slug={slug}
-            />
-          )
-        })}
-      </div>
+      <IndexContent>
+        <IndexContainer>
+          <div className="project-grid">
+            {projects.map(({ node: project }, i) => {
+              const title = project.title
+              const description = project.description
+              const slug = project.slug
+              const imageData = project.image.childImageSharp.fluid
+              return(
+                <ProjectPrewview
+                  key={i}
+                  title={title}
+                  description={description}
+                  imageData={imageData}
+                  slug={slug}
+                />
+              )
+            })}
+          </div>
+        </IndexContainer>
+      </IndexContent>
     </Layout>
   )
 }

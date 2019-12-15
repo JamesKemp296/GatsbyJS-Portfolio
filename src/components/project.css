@@ -45,10 +45,18 @@
   text-align: center;
 }
 
-.grow { transition: all .2s ease-in-out; }
-.grow:hover {
+.grow {
+  height: 300px;
+  overflow: hidden;
+}
+
+.preview-image-grow {
+  transition: all .3s ease-in-out;
+}
+
+.preview-image-grow:hover {
   z-index: 4;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .projects-text {

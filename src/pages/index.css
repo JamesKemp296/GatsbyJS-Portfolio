@@ -1,6 +1,7 @@
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+  grid-gap: 1rem;
   margin: 0;
 }
 
@@ -53,22 +54,6 @@
   margin: .8rem 0 0 0;
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-@media only screen and (max-width: 1200px) {
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
-    margin: 0;
-  }
-}
-
-@media only screen and (max-width: 1020px) {
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
-    margin: 0;
-  }
 }
 
 @media only screen and (max-width: 840px) {
