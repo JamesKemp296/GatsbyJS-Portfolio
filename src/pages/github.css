@@ -1,5 +1,22 @@
-.cool-stuff {
+#repos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 800px;
+}
+
+#github-link {
+  margin: 0;
+  padding: 0;
+}
+
+#github-link:hover {
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.loader {
   display: grid;
   place-items: center;
-  height: 1000px;
+  height: 1200px;
 }
