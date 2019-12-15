@@ -18,6 +18,15 @@
     "github": "https://github.com/JamesKemp296/Miami-Contaminated-Sites"
   },
   {
+    "title": "GatsbyJS Portfolio",
+    "slug": "portfolio",
+    "url": "http://jkemp.io/",
+    "image": "./images/portfolio.png",
+    "description": "I built my Portfolio in Gatsby for the speed and optimizations that come with generating a static site.",
+    "tech": "GatsbyJS, ReactJs, JavaScript, Styled Components, Github API, CSS in JS",
+    "github": "https://github.com/JamesKemp296/GreenLink"
+  },
+  {
     "title": "Calculator",
     "slug": "calculator",
     "url": "https://jameskemp296.github.io/Calculator-Vanilla-JavaScript/",
