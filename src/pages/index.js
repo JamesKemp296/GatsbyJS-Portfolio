@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from "../components/layout"
-import { IndexContent, IndexContainer } from '../styled/Page'
+import { IndexContent } from '../styled/Page'
 import ResumeBtn from '../styled/ResumeBtn'
 import ProjectPrewview from '../components/project-preview'
 import SEO from "../components/seo"
@@ -62,7 +62,7 @@ const IndexPage = () => {
         </div>
       </div>
       <IndexContent>
-        <IndexContainer>
+        <div className="container">
           <div className="project-grid">
             {projects.map(({ node: project }, i) => {
               const title = project.title
@@ -80,7 +80,7 @@ const IndexPage = () => {
               )
             })}
           </div>
-        </IndexContainer>
+        </div>
       </IndexContent>
     </Layout>
   )

@@ -14,12 +14,6 @@ const IndexContent = styled.div`
   color: ${props => props.theme.fontColor};
 `
 
-const IndexContainer = styled.div`
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 0 3rem;
-`
-
 const PageContainer = styled.div`
   margin: 0 auto;
   max-width: 720px;
@@ -51,4 +45,4 @@ const HeadSubText = styled.h2`
   padding: 1rem 0 0 0;
 `
 
-export { IndexContent, IndexContainer,PageContent, PageContainer, HeadContainer, HeadMainText, HeadSubText }
+export { IndexContent, PageContent, PageContainer, HeadContainer, HeadMainText, HeadSubText }
