@@ -12,6 +12,7 @@ const light = {
   btnFont: '#96F1F2',
   contentMain: 'white',
   fontColor: 'black',
+  border: '1px solid grey'
 }
 
 const dark = {
@@ -20,6 +21,7 @@ const dark = {
   btnFont: 'black',
   contentMain: '#183549',
   fontColor: '#96F1F2',
+  border: '1px solid #96F1F2'
 }
 
 const Layout = ({ children }) => {
@@ -75,7 +77,7 @@ const Layout = ({ children }) => {
       <footer>
         <div className="footer-resume">
           <div>
-            Download my <a>Resume</a>
+            Download my <a href="#resume">Resume</a>
           </div>
           <div>|</div>
           <div>
