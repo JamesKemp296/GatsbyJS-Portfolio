@@ -43,7 +43,7 @@ class Github extends React.Component {
                 {
                   repos
                   .map(repo => (
-                    <GithubCard>
+                    <GithubCard key={repo.id}>
                       <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                         <h5>{repo.name}</h5>
                       </a>

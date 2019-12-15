@@ -18,6 +18,9 @@ const GithubCard = styled.button`
   &:hover {
     background: ${props => props.theme.bgMain};
   }
+  @media only screen and (max-width: 720px) {
+    width: 400px;
+  }
 `
 
 export default GithubCard

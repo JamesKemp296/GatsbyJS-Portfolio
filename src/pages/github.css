@@ -14,9 +14,3 @@
   color: black;
   transition: all 0.3s ease-in-out;
 }
-
-.loader {
-  display: grid;
-  place-items: center;
-  height: 1200px;
-}
