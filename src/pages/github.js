@@ -16,7 +16,7 @@ class Github extends React.Component {
   fetchGithub = () => {
     fetch(`https://api.github.com/users/JamesKemp296`)
     .then(res => res.json())
-    .then(data => this.setState({ github: data, loading: false }))
+    .then(data => this.setState({ github: data }))
   }
 
   fetchRepos = () => {
