@@ -46,7 +46,7 @@
 }
 
 .grow {
-  height: 300px;
+  max-height: 300px;
   overflow: hidden;
 }
 
@@ -68,5 +68,38 @@
 @media only screen and (max-width: 1110px) {
   .projects-text h2 {
     font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  div.projects-text {
+    padding: 0;
+    margin: 0;
+  }
+
+  .grow {
+    max-height: 250px;
+    overflow: hidden;
+  }
+
+  .preview-image-grow {
+    transition: all .3s ease-in-out;
+  }
+
+  .preview-image-grow:hover {
+    z-index: 4;
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .grow {
+    max-height: 200px;
+  }
+}
+
+@media only screen and (max-width: 884px) {
+  .grow {
+    max-height: 300px;
   }
 }

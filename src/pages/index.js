@@ -52,7 +52,7 @@ const IndexPage = () => {
               Creating beautiful, highly interactive user interfaces in ReactJS with powerful and robust backends.
             </p>
             <a href="../../data/James_Kemp_Resume_2019.pdf" target="_blank" download>
-              <ResumeBtn>Download Resume</ResumeBtn>
+              <ResumeBtn id="resume-btn">Download Resume</ResumeBtn>
             </a>
           </div>
         </div>

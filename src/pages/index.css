@@ -57,8 +57,8 @@
 }
 
 #resume-btn {
-  background: #183549;
-  color: #96F1F2;
+  background: white;
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
   width: 17rem;
@@ -68,6 +68,7 @@
 }
 
 @media only screen and (max-width: 840px) {
+
   .portfolio-hero {
     max-width: 500px;
   }
