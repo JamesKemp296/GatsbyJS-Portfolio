@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
-const GithubCard = styled.button`
-  width: 220px;
+const GithubCard = styled.div`
+  text-align: center;
+  width: 180px;
+  min-height: 180px;
   margin: 1rem;
   background-color: ${props => props.theme.contentMain};
   display: inline-block;
-  padding: 30px;
+  padding: 1.8rem;
   font-family: sans-serif;
   line-height: 1.5em;
   font-size: 1em;
@@ -20,6 +22,7 @@ const GithubCard = styled.button`
   }
   @media only screen and (max-width: 720px) {
     width: 400px;
+    min-height: 150px;
   }
 `
 

@@ -43,13 +43,13 @@ class Github extends React.Component {
                 {
                   repos
                   .map(repo => (
-                    <GithubCard key={repo.id}>
-                      <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                    <a href={repo.html_url} target="_blank" rel="noopener noreferrer" key={repo.id}>
+                      <GithubCard>
                         <h5>{repo.name}</h5>
-                      </a>
-                      <p>{repo.language}</p>
-                      <p>{moment(repo.created_at).format('LL')}</p>
-                    </GithubCard>
+                        <p>{repo.language}</p>
+                        <p>{moment(repo.created_at).format('LL')}</p>
+                      </GithubCard>
+                    </a>
                   ))
                 }
               </div>
