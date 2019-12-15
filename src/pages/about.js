@@ -51,19 +51,21 @@ const About = () => {
                 <p>I am a Full-Stack Developer, graduate of Wyncode Academy, and a former chef at Margaritaville. I have 3 years of experience in a fast paced environment where I had to learn on my feet. I am now a Full-Stack Developer producing high quality responsive websites, working in both front end and back end.</p>
               </div>
               <div className="about-skills">
-                <h5>Some of my skills are:</h5>
+                <h5>My skills are:</h5>
                 <div id="about-skills-list">
                   <h5>HTML/CSS</h5>
                   <h5>JavaScript</h5>
-                  <h5>ReactJS</h5>
-                  <h5>GatsbyJS</h5>
-                  <h5>NodeJS</h5>
-                  <h5>ExpressJS</h5>
-                  <h5>Ruby on Rails</h5>
+                  <h5>React.js</h5>
+                  <h5>Gatsby.js</h5>
+                  <h5>Node.js</h5>
+                  <h5>Express.js</h5>
+                  <h5>Ruby</h5>
+                  <h5>Rails</h5>
                   <h5>MongoDB</h5>
                   <h5>GraphQL</h5>
                   <h5>MySQL</h5>
-                  <h5>Git/Github</h5>
+                  <h5>Git</h5>
+                  <h5>Github</h5>
                 </div>
                 <p className="paragraph">My name is James Kemp and I am a career changer. I have spent the last 4 years as a chef at Margaritaville. I had a design to find more fullfilling and creative work. During my search I found myself at Wyncode Academy.</p>
                 <p className="paragraph">During my time at Wyncode, I've struggled and worked my way at learnig a new skillset to launch my career in tech. I've developed a passion for coding and have developed an interest in modern web technologies such was React and GraphQL.</p>

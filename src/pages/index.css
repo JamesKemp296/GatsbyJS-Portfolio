@@ -90,7 +90,7 @@
 
 @media only screen and (max-width: 720px) {
   .portfolio-hero-wrapper {
-    max-height: 20rem;
+    max-height: 36rem;
   }
   .portfolio-hero {
     max-width: 450px;
@@ -106,21 +106,24 @@
   }
 
   .portfolio-hero-wrapper {
-    height: calc(45vh - 100px);
+    height: calc(60vh - 100px);
   }
+
   .project-grid {
     display: flex;
     flex-direction: column;
   }
+
   #portfolio-button-text {
     font-size: 1.4rem;
   }
+
   #portfolio-button-chevron {
     font-size: 1.3rem;
   }
+
   #portfolio-button {
     margin-bottom: 2.4rem;
-
   }
 }
 

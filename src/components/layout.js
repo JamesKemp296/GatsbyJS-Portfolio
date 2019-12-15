@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
 
   const GlobalStyle = createGlobalStyle`
     body {
-      background: ${props => (isDark ? '#131D27' : '#3B98D1')};
+      background: ${props => (isDark ? '#131D27' : '#B191FF')};
     }
     footer {
       background: ${props => (isDark ? 'black' : '#222222')};
