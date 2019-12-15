@@ -21,7 +21,7 @@ const GithubCard = styled.div`
     background: ${props => props.theme.bgMain};
   }
   @media only screen and (max-width: 720px) {
-    width: 400px;
+    width: 300px;
     min-height: 150px;
   }
 `
