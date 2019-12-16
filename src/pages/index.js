@@ -16,6 +16,7 @@ const IndexPage = () => {
         edges{
           node{
             title
+            sub
             slug
             url
             description
@@ -66,6 +67,7 @@ const IndexPage = () => {
           <div className="project-grid">
             {projects.map(({ node: project }, i) => {
               const title = project.title
+              const sub = project.sub
               const description = project.description
               const slug = project.slug
               const imageData = project.image.childImageSharp.fluid
@@ -73,6 +75,7 @@ const IndexPage = () => {
                 <ProjectPrewview
                   key={i}
                   title={title}
+                  sub={sub}
                   description={description}
                   imageData={imageData}
                   slug={slug}

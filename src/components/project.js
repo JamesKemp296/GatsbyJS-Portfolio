@@ -5,13 +5,13 @@ import "../globals.css"
 import { PageContent, PageContainer, HeadContainer, HeadMainText, HeadSubText } from '../styled/Page'
 
 
-const Project = ({ title, description, tech, github, url, imageData }) => (
+const Project = ({ title, description, tech, github, url, imageData, sub }) => (
   <>
     <SEO title={title} />
     <div className="project">
       <HeadContainer>
         <HeadMainText>{title}</HeadMainText>
-        <HeadSubText>Subheader will go here, I'll make one</HeadSubText>
+        <HeadSubText>{sub}</HeadSubText>
       </HeadContainer>
       <PageContent>
         <PageContainer>

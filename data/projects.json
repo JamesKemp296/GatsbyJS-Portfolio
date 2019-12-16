@@ -1,6 +1,7 @@
 [
   {
     "title": "GreenLink",
+    "sub": "Ruby on Rails, React, and PostgreSQL",
     "slug": "greenlink",
     "url": "http://thegreenlink.herokuapp.com/",
     "image": "./images/greenlink.png",
@@ -10,6 +11,7 @@
   },
   {
     "title": "Miami Contaminated Sites",
+    "sub": "React, API's, and express",
     "slug": "miamicontaminatedsites",
     "url": "http://miamicontaminatedsites.com/",
     "image": "./images/miamicontaminatedsites.png",
@@ -19,6 +21,7 @@
   },
   {
     "title": "GatsbyJS Portfolio",
+    "sub": "Gatsby, GraphQL, and CSS in JS",
     "slug": "portfolio",
     "url": "http://jkemp.io/",
     "image": "./images/portfolio.png",
@@ -28,6 +31,7 @@
   },
   {
     "title": "Calculator",
+    "sub": "Just JavaScript and HTML",
     "slug": "calculator",
     "url": "https://jameskemp296.github.io/Calculator-Vanilla-JavaScript/",
     "image": "./images/calculator.png",
