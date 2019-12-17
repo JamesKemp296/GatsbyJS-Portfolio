@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from "../components/layout"
 import { IndexContent } from '../styled/Page'
+import Resume from './James_Kemp_Resume_2019.pdf'
 import ResumeBtn from '../styled/ResumeBtn'
 import ProjectPrewview from '../components/project-preview'
 import SEO from "../components/seo"
@@ -52,7 +53,7 @@ const IndexPage = () => {
             <p>
               Creating beautiful, highly interactive user interfaces in ReactJS with powerful and robust backends.
             </p>
-            <a href="/documents/James_Kemp_Resume_2019.pdf" target="_blank" download>
+            <a href={Resume} target="_blank" download>
               <ResumeBtn id="resume-btn">Download Resume</ResumeBtn>
             </a>
           </div>
