@@ -24,6 +24,7 @@ body {
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #3B98D1;
   /* background: linear-gradient(270deg, #13828a, #7e4ed4);
   background-size: 400% 400%;
   animation: background-gradient 30s ease infinite;
