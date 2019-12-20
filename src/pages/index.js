@@ -63,7 +63,7 @@ const IndexPage = () => {
           <h4 id="portfolio-button-chevron">&#xFE40;</h4>
         </div>
       </div>
-      <IndexContent>
+      <IndexContent style={{background: "#183549"}}>
         <div className="container">
           <div className="project-grid">
             {projects.map(({ node: project }, i) => {
