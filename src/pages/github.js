@@ -35,7 +35,7 @@ class Github extends React.Component {
             <a id="github-link" href={github.html_url} target="_blank" rel="noopener noreferrer">
               <HeadMainText>{loading ? 'Loading' : github.login }</HeadMainText>
             </a>
-            <HeadSubText>{loading ? 'Loading' : github.bio}</HeadSubText>
+            <HeadSubText>{loading ? 'Fetching repos . . .' : github.bio}</HeadSubText>
           </HeadContainer>
           <PageContent>
             <PageContainer>
