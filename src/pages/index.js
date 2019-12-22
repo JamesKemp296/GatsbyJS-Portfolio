@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from "../components/layout"
 import { IndexContent } from '../styled/Page'
-import Resume from './James_Kemp_Resume_2019.pdf'
+import Resume from '../../data/James_Kemp_Resume_2019.pdf'
 import ResumeBtn from '../styled/ResumeBtn'
 import ProjectPrewview from '../components/project-preview'
 import SEO from "../components/seo"

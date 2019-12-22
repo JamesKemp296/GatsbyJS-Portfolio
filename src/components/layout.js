@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-// import DarkButton from '../styled/DarkButton'
+import Resume from '../../data/James_Kemp_Resume_2019.pdf'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import Header from "./header"
 import "../globals.css"
@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
       <footer>
         <div className="footer-resume">
           <div>
-            <a href="../../data/James_Kemp_Resume_2019.pdf" target="_blank" download>
+          <a href={Resume} download>
               Download my Resume
             </a>
           </div>
