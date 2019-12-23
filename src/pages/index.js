@@ -46,9 +46,7 @@ const IndexPage = () => {
             <div className="wiggle-flex">
               {split.map((letter, i) => (
                 <h1 key={i} className="wiggle">
-                  <span className="get-big">
-                    {letter === " " ? "\xa0" : letter}
-                  </span>
+                  {letter === " " ? "\xa0" : letter}
                 </h1>
               ))}
             </div>
