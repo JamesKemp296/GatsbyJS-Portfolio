@@ -20,6 +20,16 @@
     "github": "https://github.com/JamesKemp296/Miami-Contaminated-Sites"
   },
   {
+    "title": "iControl",
+    "sub": "MySQL, handlebars.js, and express",
+    "slug": "icontrol",
+    "url": "https://mighty-depths-29775.herokuapp.com/",
+    "image": "./images/icontrol.png",
+    "description": "We developed a simple Inventory management system for small businesses.",
+    "tech": "MySQL, JavaScript, node, handlebars, express and bootstrap",
+    "github": "https://github.com/JRiepe/icontrol"
+  },
+  {
     "title": "GatsbyJS Portfolio",
     "sub": "Gatsby, GraphQL, and CSS in JS",
     "slug": "portfolio",
