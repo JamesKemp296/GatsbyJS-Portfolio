@@ -51,12 +51,13 @@
 
 #portfolio-button-chevron {
   padding: 0;
-  margin: .8rem 0 0 0;
+  margin: 0.8rem 0 0 0;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 #resume-btn {
+  transition: 0.3s ease-in-out;
   background: white;
   color: black;
   text-transform: uppercase;
@@ -67,8 +68,12 @@
   z-index: 5;
 }
 
-@media only screen and (max-width: 840px) {
+#resume-btn:hover {
+  color: white;
+  background: black;
+}
 
+@media only screen and (max-width: 840px) {
   .portfolio-hero {
     max-width: 500px;
   }
@@ -125,15 +130,27 @@
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(0deg), scale(3); }
- 25% { transform: rotate(15deg); }
- 50% { transform: rotate(-15deg); }
- 75% { transform: rotate(15deg); }
-100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+    transform: scale(3);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-.wiggle:hover, .wiggle:focus, .wiggle:active {
-  transform: scale(1.8);
+.wiggle:hover,
+.wiggle:focus,
+.wiggle:active {
   transition: 0.3s;
   animation: wiggle 1s infinite;
 }

@@ -1,10 +1,10 @@
 import React from "react"
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import { IndexContent } from '../styled/Page'
-import Resume from '../../data/James_Kemp_Resume_2019.pdf'
-import ResumeBtn from '../styled/ResumeBtn'
-import ProjectPrewview from '../components/project-preview'
+import { IndexContent } from "../styled/Page"
+import Resume from "../../data/James_Kemp_Resume_2019.pdf"
+import ResumeBtn from "../styled/ResumeBtn"
+import ProjectPrewview from "../components/project-preview"
 import SEO from "../components/seo"
 
 import "../globals.css"
@@ -13,17 +13,17 @@ import "./index.css"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allProjectsJson{
-        edges{
-          node{
+      allProjectsJson {
+        edges {
+          node {
             title
             sub
             slug
             url
             description
-            image{
-              childImageSharp{
-                fluid{
+            image {
+              childImageSharp {
+                fluid {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -37,21 +37,24 @@ const IndexPage = () => {
   const projects = data.allProjectsJson.edges
   const hero = "Full-Stack Developer"
   const split = hero.split("")
-  return(
+  return (
     <Layout>
       <SEO title="Portfolio" />
       <div className="container">
         <div className="portfolio-hero-wrapper">
           <div className="portfolio-hero">
-          <div className="wiggle-flex">
-              {
-                split.map((letter, i) => (
-                  <h1 key={i} className="wiggle">{letter === " " ? "\xa0" : letter}</h1>
-                ))
-              }
+            <div className="wiggle-flex">
+              {split.map((letter, i) => (
+                <h1 key={i} className="wiggle">
+                  <span className="get-big">
+                    {letter === " " ? "\xa0" : letter}
+                  </span>
+                </h1>
+              ))}
             </div>
             <p>
-              Creating beautiful, highly interactive user interfaces in ReactJS with powerful and robust backends.
+              Creating beautiful, highly interactive user interfaces in ReactJS
+              with powerful and robust backends.
             </p>
             <a href={Resume} download>
               <ResumeBtn id="resume-btn">Download Resume</ResumeBtn>
@@ -63,7 +66,7 @@ const IndexPage = () => {
           <h4 id="portfolio-button-chevron">&#xFE40;</h4>
         </div>
       </div>
-      <IndexContent style={{background: "#183549"}}>
+      <IndexContent style={{ background: "#183549" }}>
         <div className="container">
           <div className="project-grid">
             {projects.map(({ node: project }, i) => {
@@ -72,7 +75,7 @@ const IndexPage = () => {
               const description = project.description
               const slug = project.slug
               const imageData = project.image.childImageSharp.fluid
-              return(
+              return (
                 <ProjectPrewview
                   key={i}
                   title={title}
