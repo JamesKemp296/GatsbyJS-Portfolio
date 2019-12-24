@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Links from './links'
+import Links from "./links"
 import "../globals.css"
 import "./header.css"
 
 const Header = ({ siteTitle, subTitle }) => {
   const [isToggled, setToggled] = useState(false)
 
-  return(
+  return (
     <header id="header-main">
       <div id="navbar-main">
         <div id="navbar-title-group">
@@ -28,7 +28,7 @@ const Header = ({ siteTitle, subTitle }) => {
           <span className="bar"></span>
           <span className="bar"></span>
         </a>
-        <Links isToggled={isToggled}/>
+        <Links isToggled={isToggled} />
       </div>
     </header>
   )
@@ -36,12 +36,12 @@ const Header = ({ siteTitle, subTitle }) => {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  subTitle: PropTypes.string
+  subTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
   siteTitle: `James Kemp`,
-  subTitle: `Full-Stack Developer`
+  subTitle: `Full-Stack Developer`,
 }
 
 export default Header
