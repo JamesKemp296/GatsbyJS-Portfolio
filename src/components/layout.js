@@ -30,8 +30,9 @@ const Layout = ({ children }) => {
   const { title, subTitle } = data.site.siteMetadata
   return (
     <>
+      <div ref={ref}></div>
       <Header siteTitle={title} subTitle={subTitle} />
-      <div ref={ref}>
+      <div>
         <main>{children}</main>
       </div>
       <footer>
