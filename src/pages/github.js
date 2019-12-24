@@ -1,70 +1,75 @@
 import React from "react"
-import moment from 'moment'
-import { PageContent, PageContainer, HeadContainer, HeadMainText, HeadSubText } from '../styled/Page'
+import moment from "moment"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import GithubCard from '../styled/GithubCard'
-import './github.css'
+import "../globals.css"
+import "./github.css"
 
 class Github extends React.Component {
   state = {
     loading: true,
     github: {},
-    repos: []
+    repos: [],
   }
 
   fetchGithub = () => {
     fetch(`https://api.github.com/users/JamesKemp296`)
-    .then(res => res.json())
-    .then(data => this.setState({ github: data }))
+      .then(res => res.json())
+      .then(data => this.setState({ github: data }))
   }
 
   fetchRepos = () => {
     fetch(`https://api.github.com/users/JamesKemp296/repos`)
-    .then(res => res.json())
-    .then(data => this.setState({ repos: data, loading: false }))
+      .then(res => res.json())
+      .then(data => this.setState({ repos: data, loading: false }))
   }
 
-  render(){
+  render() {
     const { github, repos, loading } = this.state
-    return(
+    return (
       <Layout>
         <SEO title="Github" />
         <article>
-          <HeadContainer>
-            <a id="github-link" href={github.html_url} target="_blank" rel="noopener noreferrer">
-              <HeadMainText>{loading ? 'Loading' : github.login }</HeadMainText>
+          <div className="head-container">
+            <a
+              id="github-link"
+              href={github.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h1>{loading ? "Loading" : github.login}</h1>
             </a>
-            <HeadSubText>{loading ? 'Fetching repos . . .' : github.bio}</HeadSubText>
-          </HeadContainer>
-          <PageContent>
-            <PageContainer>
+            <h2>{loading ? "Fetching repos . . ." : github.bio}</h2>
+          </div>
+          <div className="page-content">
+            <div className="page-container">
               <div id="repos">
-                {
-                  repos
-                  .map(repo => (
-                    <a href={repo.html_url} target="_blank" rel="noopener noreferrer" key={repo.id}>
-                      <GithubCard>
-                        <h5>{repo.name}</h5>
-                        <p>{repo.language}</p>
-                        <p>{moment(repo.created_at).format('LL')}</p>
-                      </GithubCard>
-                    </a>
-                  ))
-                }
+                {repos.map(repo => (
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={repo.id}
+                  >
+                    <div className="github-card">
+                      <h5>{repo.name}</h5>
+                      <p>{repo.language}</p>
+                      <p>{moment(repo.created_at).format("LL")}</p>
+                    </div>
+                  </a>
+                ))}
               </div>
-            </PageContainer>
-          </PageContent>
+            </div>
+          </div>
         </article>
       </Layout>
     )
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.fetchGithub()
     this.fetchRepos()
   }
 }
-
 
 export default Github

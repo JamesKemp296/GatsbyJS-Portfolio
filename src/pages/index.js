@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import { IndexContent } from "../styled/Page"
 import Resume from "../../data/James_Kemp_Resume_2019.pdf"
-import ResumeBtn from "../styled/ResumeBtn"
 import ProjectPrewview from "../components/project-preview"
 import SEO from "../components/seo"
 
@@ -35,11 +33,12 @@ const IndexPage = () => {
   `)
 
   const ref = React.createRef()
-  const handleClick = () =>
+  const handleClick = () => {
     ref.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     })
+  }
 
   const projects = data.allProjectsJson.edges
   const hero = "Full-Stack Developer"
@@ -62,7 +61,7 @@ const IndexPage = () => {
               with powerful and robust backends.
             </p>
             <a href={Resume} download>
-              <ResumeBtn id="resume-btn">Download Resume</ResumeBtn>
+              <button id="resume-btn">Download Resume</button>
             </a>
           </div>
         </div>
@@ -71,7 +70,7 @@ const IndexPage = () => {
           <h4 id="portfolio-button-chevron">&#xFE40;</h4>
         </button>
       </div>
-      <IndexContent style={{ background: "#183549" }} ref={ref}>
+      <div id="index-content" ref2={ref}>
         <div className="container">
           <div className="project-grid">
             {projects.map(({ node: project }, i) => {
@@ -93,7 +92,7 @@ const IndexPage = () => {
             })}
           </div>
         </div>
-      </IndexContent>
+      </div>
     </Layout>
   )
 }
