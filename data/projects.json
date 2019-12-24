@@ -1,15 +1,5 @@
 [
   {
-    "title": "GreenLink",
-    "sub": "Ruby on Rails, React, and PostgreSQL",
-    "slug": "greenlink",
-    "url": "http://thegreenlink.herokuapp.com/",
-    "image": "./images/greenlink.png",
-    "description": "We built this site to help reduce the total consumption of energy accross the state of florida.",
-    "tech": "ReactJs, Ruby on Rails, JavaScript, PostgreSQL, Redis, Sidekiq, Selenium, Web Scraping",
-    "github": "https://github.com/JamesKemp296/GreenLink"
-  },
-  {
     "title": "Miami Contaminated Sites",
     "sub": "React, API's, and express",
     "slug": "miamicontaminatedsites",
@@ -18,6 +8,16 @@
     "description": "We built this site to help miami dade residents stay informed about contamination in their area.",
     "tech": "ReactJs, JavaScript, Google Maps, Miami Dade API",
     "github": "https://github.com/JamesKemp296/Miami-Contaminated-Sites"
+  },
+  {
+    "title": "GreenLink",
+    "sub": "Ruby on Rails, React, and PostgreSQL",
+    "slug": "greenlink",
+    "url": "http://thegreenlink.herokuapp.com/",
+    "image": "./images/greenlink.png",
+    "description": "We built this site to help reduce the total consumption of energy accross the state of florida.",
+    "tech": "ReactJs, Ruby on Rails, JavaScript, PostgreSQL, Redis, Sidekiq, Selenium, Web Scraping",
+    "github": "https://github.com/JamesKemp296/GreenLink"
   },
   {
     "title": "iControl",

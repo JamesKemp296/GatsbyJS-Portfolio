@@ -34,6 +34,13 @@ const IndexPage = () => {
     }
   `)
 
+  const ref = React.createRef()
+  const handleClick = () =>
+    ref.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+
   const projects = data.allProjectsJson.edges
   const hero = "Full-Stack Developer"
   const split = hero.split("")
@@ -59,12 +66,12 @@ const IndexPage = () => {
             </a>
           </div>
         </div>
-        <div id="portfolio-button">
+        <button id="portfolio-button" onClick={handleClick}>
           <h5 id="portfolio-button-text">VIEW PORTFOLIO</h5>
           <h4 id="portfolio-button-chevron">&#xFE40;</h4>
-        </div>
+        </button>
       </div>
-      <IndexContent style={{ background: "#183549" }}>
+      <IndexContent style={{ background: "#183549" }} ref={ref}>
         <div className="container">
           <div className="project-grid">
             {projects.map(({ node: project }, i) => {
