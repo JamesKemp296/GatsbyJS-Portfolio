@@ -83,6 +83,7 @@
 
 .project-image {
   position: relative;
+  overflow: hidden;
 }
 
 .project-image:hover .overlay {
@@ -113,10 +114,6 @@
   div.projects-text {
     padding: 0;
     margin: 0;
-  }
-
-  .project-image {
-    overflow: hidden;
   }
 
   .preview-image {
