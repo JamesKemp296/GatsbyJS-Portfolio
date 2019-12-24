@@ -70,7 +70,7 @@ const IndexPage = () => {
           <h4 id="portfolio-button-chevron">&#xFE40;</h4>
         </button>
       </div>
-      <div id="index-content" ref2={ref}>
+      <div id="index-content" ref={ref}>
         <div className="container">
           <div className="project-grid">
             {projects.map(({ node: project }, i) => {
