@@ -11,6 +11,7 @@ class Github extends React.Component {
     github: {},
     repos: [],
     search: "",
+    currentLang: "all",
   }
 
   fetchGithub = () => {
@@ -29,10 +30,25 @@ class Github extends React.Component {
     this.setState({ search })
   }
 
+  handleLanguage = currentLang => {
+    this.setState({ currentLang })
+  }
+
   render() {
-    const { github, repos, loading } = this.state
-    let filteredRepos = repos.filter(repo => {
-      return repo.name.toLowerCase().includes(this.state.search)
+    const { github, repos, loading, currentLang } = this.state
+    console.log(repos)
+    let filteredRepos = repos
+      .filter(repo => {
+        return repo.name.toLowerCase().includes(this.state.search)
+      })
+      .filter(repo => {
+        if (currentLang === "all") return true
+        return repo.language === currentLang || repo.language === null
+      })
+    let languages = []
+    console.log(languages)
+    repos.forEach(repo => {
+      languages.push(repo.language || "CSS")
     })
     return (
       <Layout>
@@ -51,17 +67,31 @@ class Github extends React.Component {
           </div>
           <div className="page-content">
             <div className="page-container">
-              <div id="github-filters">
-                <input
-                  id="github-search"
-                  type="text"
-                  name="search"
-                  placeholder="Search"
-                  autoComplete="off"
-                  onChange={e => this.handleSearch(e.target.value)}
-                  value={this.state.search}
-                />
-              </div>
+              {!loading && (
+                <div id="github-filters">
+                  <input
+                    id="github-search"
+                    type="text"
+                    name="search"
+                    placeholder="Search"
+                    autoComplete="off"
+                    onChange={e => this.handleSearch(e.target.value)}
+                    value={this.state.search}
+                  />
+                  <select onChange={e => this.handleLanguage(e.target.value)}>
+                    <option value="all">All Languages</option>
+                    {languages
+                      .filter((v, i) => languages.indexOf(v) === i)
+                      .map((language, i) => {
+                        return (
+                          <option key={i} value={language || "CSS"}>
+                            {language || "CSS"}
+                          </option>
+                        )
+                      })}
+                  </select>
+                </div>
+              )}
               <div id="repos">
                 {filteredRepos.map(repo => (
                   <a
@@ -72,13 +102,17 @@ class Github extends React.Component {
                   >
                     <div className="github-card">
                       <h5>{repo.name}</h5>
-                      <p className="github-text">{repo.language}</p>
+                      <p className="github-text">{repo.language || "CSS"}</p>
                       <div id="github-dates">
                         <p className="github-text">
-                          Created: {moment(repo.created_at).format("L")}
+                          Created:{" "}
+                          {moment(repo.created_at).format("MMM Do YYYY")}
                         </p>
                         <p className="github-text">
-                          Updated: {moment(repo.updated_at).format("L")}
+                          Updated:{" "}
+                          {moment(repo.updated_at)
+                            .startOf("day")
+                            .fromNow()}
                         </p>
                       </div>
                     </div>
