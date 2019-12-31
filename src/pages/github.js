@@ -69,7 +69,7 @@ class Github extends React.Component {
           <div className="page-content">
             <div className="page-container">
               {!loading && (
-                <div id="github-filters">
+                <div id="github-filters-container">
                   <input
                     id="github-search"
                     type="text"
@@ -79,18 +79,25 @@ class Github extends React.Component {
                     onChange={e => this.handleSearch(e.target.value)}
                     value={this.state.search}
                   />
-                  <select onChange={e => this.handleLanguage(e.target.value)}>
-                    <option value="all">All Languages</option>
-                    {languages
-                      .filter((v, i) => languages.indexOf(v) === i)
-                      .map((language, i) => {
-                        return (
-                          <option key={i} value={language || "CSS"}>
-                            {language || "CSS"}
-                          </option>
-                        )
-                      })}
-                  </select>
+                  <div id="github-filters">
+                    <select
+                      className="github-filter"
+                      onChange={e => this.handleLanguage(e.target.value)}
+                    >
+                      <option value="all">All Languages</option>
+                      {languages
+                        .filter((v, i) => languages.indexOf(v) === i)
+                        .map((language, i) => {
+                          return (
+                            <option key={i} value={language || "CSS"}>
+                              {language || "CSS"}
+                            </option>
+                          )
+                        })}
+                    </select>
+                    <button className="github-filter">Created (oldest)</button>
+                    <button className="github-filter">Updated (oldest)</button>
+                  </div>
                 </div>
               )}
               <div id="repos">

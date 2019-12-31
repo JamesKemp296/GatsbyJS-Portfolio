@@ -21,8 +21,10 @@
 
 /* ====================FILTERS=========================== */
 
-#github-filters {
+#github-filters-container {
   padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 #github-search {
@@ -34,18 +36,22 @@
   margin: 0 1rem;
 }
 
+#github-filters {
+  margin: 0 1rem;
+}
+
 ::placeholder {
   padding-left: 0;
 }
 
-select {
+.github-filter {
   border: none;
   background: white;
   border: #999999 solid 1px;
   color: black;
   height: 44px;
   font-size: 1.6rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 /* ====================CARD============================ */
@@ -84,9 +90,30 @@ select {
   margin: 0;
 }
 
+@media only screen and (max-width: 770px) {
+  #github-filters-container {
+    flex-direction: column;
+  }
+  #github-search {
+    width: calc(100% - 4.4rem);
+  }
+}
+
 @media only screen and (max-width: 720px) {
   .github-card {
     width: 300px;
     min-height: 150px;
+  }
+  .github-filters-container {
+    place-items: center;
+  }
+  .github-filter {
+    width: 33.333333%;
+  }
+  #github-filters {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: center;
   }
 }
