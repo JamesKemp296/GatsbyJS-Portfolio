@@ -43,7 +43,8 @@ class Github extends React.Component {
       })
       .filter(repo => {
         if (currentLang === "all") return true
-        return repo.language === currentLang || repo.language === null
+        if (currentLang === "CSS") return repo.language === null
+        return repo.language === currentLang
       })
     let languages = []
     console.log(languages)
