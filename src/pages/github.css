@@ -21,6 +21,10 @@
 
 /* ====================FILTERS=========================== */
 
+#github-filters {
+  padding-bottom: 1rem;
+}
+
 #github-search {
   width: 30%;
   height: 40px;
@@ -32,6 +36,16 @@
 
 ::placeholder {
   padding-left: 0;
+}
+
+select {
+  border: none;
+  background: white;
+  border: #999999 solid 1px;
+  color: black;
+  height: 44px;
+  font-size: 1.6rem;
+  padding: 0 2rem;
 }
 
 /* ====================CARD============================ */
@@ -50,11 +64,15 @@
   line-height: 1.5em;
   font-size: 1em;
   color: black;
-  border: grey solid 1px;
+  border: #999999 solid 1px;
   border-radius: 5px;
   transition: 0.3s;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+
+.github-card h5 {
+  margin: 1rem;
 }
 
 .github-card:hover {
