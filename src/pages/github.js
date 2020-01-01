@@ -12,6 +12,8 @@ class Github extends React.Component {
     repos: [],
     search: "",
     currentLang: "all",
+    created: "",
+    updated: "",
   }
 
   fetchGithub = () => {
@@ -32,6 +34,13 @@ class Github extends React.Component {
 
   handleLanguage = currentLang => {
     this.setState({ currentLang })
+  }
+  handleCreated = () => {
+    fetch(
+      `https://api.github.com/users/JamesKemp296/repos?q=oauth&sort=created&order=desc`
+    )
+      .then(res => res.json())
+      .then(data => this.setState({ repos: data, loading: false }))
   }
 
   render() {
@@ -95,7 +104,12 @@ class Github extends React.Component {
                           )
                         })}
                     </select>
-                    <button className="github-filter">Created (oldest)</button>
+                    <button
+                      className="github-filter"
+                      onClick={this.handleCreated}
+                    >
+                      Created (oldest)
+                    </button>
                     <button className="github-filter">Updated (oldest)</button>
                   </div>
                 </div>
