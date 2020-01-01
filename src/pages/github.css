@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 800px;
+  min-height: 600px;
 }
 
 #repos a {
@@ -28,7 +28,7 @@
 }
 
 #github-search {
-  width: 30%;
+  width: 28%;
   height: 40px;
   padding: 0px;
   padding-left: 2rem;
@@ -37,7 +37,7 @@
 }
 
 #github-filters {
-  margin: 0 1rem;
+  margin-right: 1rem;
 }
 
 ::placeholder {
@@ -52,6 +52,7 @@
   height: 44px;
   font-size: 1.6rem;
   padding: 0 1rem;
+  width: 154px;
 }
 
 /* ====================CARD============================ */
@@ -90,25 +91,28 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 800px) {
   #github-filters-container {
     flex-direction: column;
   }
   #github-search {
     width: calc(100% - 4.4rem);
   }
+  #github-filters {
+    margin: 0 1rem;
+  }
+  .github-filter {
+    width: 33.333333%;
+  }
 }
 
 @media only screen and (max-width: 720px) {
   .github-card {
-    width: 300px;
+    width: 257px;
     min-height: 150px;
   }
   .github-filters-container {
     place-items: center;
-  }
-  .github-filter {
-    width: 33.333333%;
   }
   #github-filters {
     display: flex;
