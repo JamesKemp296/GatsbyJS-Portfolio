@@ -108,7 +108,7 @@
 
 @media only screen and (max-width: 720px) {
   .github-card {
-    width: 257px;
+    width: 260px;
     min-height: 150px;
   }
   .github-filters-container {
