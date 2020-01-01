@@ -12,8 +12,8 @@ class Github extends React.Component {
     repos: [],
     search: "",
     currentLang: "all",
-    created: "",
-    updated: "",
+    created: false,
+    updated: false,
   }
 
   fetchGithub = () => {
@@ -23,7 +23,9 @@ class Github extends React.Component {
   }
 
   fetchRepos = () => {
-    fetch(`https://api.github.com/users/JamesKemp296/repos`)
+    fetch(
+      `https://api.github.com/users/JamesKemp296/repos?q=oauth&sort=created&order=desc`
+    )
       .then(res => res.json())
       .then(data => this.setState({ repos: data, loading: false }))
   }
@@ -35,17 +37,27 @@ class Github extends React.Component {
   handleLanguage = currentLang => {
     this.setState({ currentLang })
   }
+
   handleCreated = () => {
-    fetch(
-      `https://api.github.com/users/JamesKemp296/repos?q=oauth&sort=created&order=desc`
-    )
-      .then(res => res.json())
-      .then(data => this.setState({ repos: data, loading: false }))
+    this.setState({ created: !this.state.created })
+    this.state.repos &&
+      this.state.repos.sort((a, b) => {
+        if (this.state.created) return a.created_at > b.created_at ? -1 : 1
+        return a.created_at > b.created_at ? 1 : -1
+      })
+  }
+
+  handleUpdated = () => {
+    this.setState({ updated: !this.state.updated })
+    this.state.repos &&
+      this.state.repos.sort((a, b) => {
+        if (this.state.updated) return a.updated_at > b.updated_at ? -1 : 1
+        return a.updated_at > b.updated_at ? 1 : -1
+      })
   }
 
   render() {
-    const { github, repos, loading, currentLang } = this.state
-    console.log(repos)
+    const { github, repos, loading, currentLang, created, updated } = this.state
     let filteredRepos = repos
       .filter(repo => {
         return repo.name.toLowerCase().includes(this.state.search)
@@ -56,7 +68,6 @@ class Github extends React.Component {
         return repo.language === currentLang
       })
     let languages = []
-    console.log(languages)
     repos.forEach(repo => {
       languages.push(repo.language || "CSS")
     })
@@ -108,9 +119,14 @@ class Github extends React.Component {
                       className="github-filter"
                       onClick={this.handleCreated}
                     >
-                      Created (oldest)
+                      Created {created ? "(oldest)" : "(newest)"}
                     </button>
-                    <button className="github-filter">Updated (oldest)</button>
+                    <button
+                      className="github-filter"
+                      onClick={this.handleUpdated}
+                    >
+                      Updated {updated ? "(oldest)" : "(newest)"}
+                    </button>
                   </div>
                 </div>
               )}
@@ -128,7 +144,9 @@ class Github extends React.Component {
                       <div id="github-dates">
                         <p className="github-text">
                           Created:{" "}
-                          {moment(repo.created_at).format("MMM Do YYYY")}
+                          {moment(repo.created_at)
+                            .startOf("day")
+                            .fromNow()}
                         </p>
                         <p className="github-text">
                           Updated:{" "}
