@@ -45,6 +45,7 @@
 }
 
 .github-filter {
+  transition: ease-in-out all 0.1s;
   border: none;
   background: white;
   border: #999999 solid 1px;
@@ -53,6 +54,11 @@
   font-size: 1.6rem;
   padding: 0 1rem;
   width: 154px;
+}
+
+button.github-filter:hover {
+  color: white;
+  background: black;
 }
 
 /* ====================CARD============================ */

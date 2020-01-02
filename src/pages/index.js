@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Resume from "../../data/James_Kemp_Resume_2019.pdf"
+import IconLinks from "../components/iconLinks"
 import ProjectPrewview from "../components/project-preview"
 import SEO from "../components/seo"
 
@@ -60,15 +60,13 @@ const IndexPage = () => {
               Creating beautiful, highly interactive user interfaces in ReactJS
               with powerful and robust backends.
             </p>
-            <a href={Resume} download>
-              <button id="resume-btn">Download Resume</button>
-            </a>
+            <IconLinks />
           </div>
         </div>
         <button id="portfolio-button" onClick={handleClick}>
           <h5 id="portfolio-button-text">VIEW PORTFOLIO</h5>
-          <h4 id="portfolio-button-chevron">&#xFE40;</h4>
         </button>
+        <h4 id="portfolio-button-chevron">&#xFE40;</h4>
       </div>
       <div id="index-content" ref={ref}>
         <div className="container">
