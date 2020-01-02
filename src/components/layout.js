@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Resume from "../../data/James_Kemp_Resume_2019.pdf"
 import Header from "./header"
+import IconLinks from "./iconLinks"
 import "../globals.css"
 
 const Layout = ({ children }) => {
@@ -36,44 +37,12 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       </div>
       <footer>
-        <div id="footer-top">
-          <div>
-            <a href={Resume} download>
-              Download my Resume
-            </a>
-          </div>
-          <div>|</div>
-          <div>
-            <div>
-              <button onClick={handleClick} id="top-btn">
-                Go back to the top
-              </button>
-            </div>
-          </div>
+        <div id="back-to-top">
+          <button onClick={handleClick} id="top-btn">
+            Go back to the top
+          </button>
         </div>
-        <div className="footer-links">
-          <a
-            href="https://twitter.com/jkempdev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://github.com/JamesKemp296"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jamesdanielkemp/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
+        <IconLinks />
         <div className="footer-bottom">
           © {new Date().getFullYear()}, {"Built with"}
           {"\xa0"}
