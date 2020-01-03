@@ -103,6 +103,7 @@ class Github extends React.Component {
                     <select
                       className="github-filter"
                       onChange={e => this.handleLanguage(e.target.value)}
+                      onBlur={e => this.handleLanguage(e.target.value)}
                     >
                       <option value="all">All Languages</option>
                       {languages
