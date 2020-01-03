@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import IconLinks from "../components/iconLinks"
-import ProjectPrewview from "../components/project-preview"
+import IconLinks from "../components/IconLinks/IconLinks"
+import ProjectPrewview from "../components/Project/project-preview"
 import SEO from "../components/seo"
 
 import "../globals.css"
