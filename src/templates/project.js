@@ -1,11 +1,11 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Project from '../components/project'
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import Project from "../components/Project/project"
 
 export const query = graphql`
-  query($slug: String!){
-    projectsJson(slug: {eq: $slug }) {
+  query($slug: String!) {
+    projectsJson(slug: { eq: $slug }) {
       title
       sub
       description
@@ -33,7 +33,7 @@ const ProjectTemplate = ({ data }) => {
   const tech = project.tech
   const github = project.github
 
-  return(
+  return (
     <Layout>
       <Project
         title={title}

@@ -1,5 +1,5 @@
 import React from "react"
-import Resume from "../../data/James_Kemp_Resume_2019.pdf"
+import Resume from "../../../data/JamesKempResume_2020.pdf"
 import { FaGithub } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
 import { FaCodepen } from "react-icons/fa"

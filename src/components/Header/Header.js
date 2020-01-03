@@ -2,9 +2,9 @@ import { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Links from "./links"
-import "../globals.css"
-import "./header.css"
+import NavLinks from "./NavLinks"
+import "../../globals.css"
+import "./Header.css"
 
 const Header = ({ siteTitle, subTitle }) => {
   const [isToggled, setToggled] = useState(false)
@@ -28,7 +28,7 @@ const Header = ({ siteTitle, subTitle }) => {
           <span className="bar"></span>
           <span className="bar"></span>
         </a>
-        <Links isToggled={isToggled} />
+        <NavLinks isToggled={isToggled} />
       </div>
     </header>
   )
