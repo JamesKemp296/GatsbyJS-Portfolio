@@ -34,7 +34,7 @@
 
 .portfolio-hero p {
   font-size: 2rem;
-  margin: 2rem;
+  margin: 2rem 1rem;
 }
 
 #portfolio-button {
@@ -119,13 +119,14 @@
   }
 
   .portfolio-hero-wrapper {
-    height: calc(60vh - 100px);
+    height: 350px;
   }
 }
 
 @media only screen and (max-width: 720px) {
   .portfolio-hero-wrapper {
     max-height: 36rem;
+    height: 30rem;
   }
   .portfolio-hero {
     max-width: 450px;
@@ -137,11 +138,7 @@
 
   .portfolio-hero p {
     font-size: 1.5rem;
-    margin-top: 0;
-  }
-
-  .portfolio-hero-wrapper {
-    height: calc(60vh - 100px);
+    margin: 0rem;
   }
 
   .project-grid {
