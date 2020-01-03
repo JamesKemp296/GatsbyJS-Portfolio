@@ -28,7 +28,7 @@
 }
 
 #github-search {
-  width: 28%;
+  width: 196px;
   height: 40px;
   padding: 0px;
   padding-left: 2rem;
@@ -53,12 +53,13 @@
   height: 44px;
   font-size: 1.6rem;
   padding: 0 1rem;
-  width: 154px;
+  width: 153px;
 }
 
 button.github-filter:hover {
   color: white;
   background: black;
+  border: black;
 }
 
 /* ====================CARD============================ */
