@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import IconLinks from "./iconLinks"
+import Header from "./Header/Header"
+import IconLinks from "./IconLinks/IconLinks"
 import "../globals.css"
 
 const Layout = ({ children }) => {
