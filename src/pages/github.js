@@ -60,7 +60,7 @@ class Github extends React.Component {
     const { github, repos, loading, currentLang, created, updated } = this.state
     let filteredRepos = repos
       .filter(repo => {
-        return repo.name.toLowerCase().includes(this.state.search)
+        return repo.name.toLowerCase().includes(this.state.search.toLowerCase())
       })
       .filter(repo => {
         if (currentLang === "all") return true
