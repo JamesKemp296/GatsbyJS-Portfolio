@@ -60,17 +60,26 @@ class Github extends React.Component {
     const { github, repos, loading, currentLang, created, updated } = this.state
     let filteredRepos = repos
       .filter(repo => {
-        return repo.name.toLowerCase().includes(this.state.search)
+        return repo.name.toLowerCase().includes(this.state.search.toLowerCase())
       })
       .filter(repo => {
         if (currentLang === "all") return true
         if (currentLang === "CSS") return repo.language === null
         return repo.language === currentLang
       })
-    let languages = []
+    const languages = []
     repos.forEach(repo => {
       languages.push(repo.language || "CSS")
     })
+    const filteredLanguages = languages
+      .filter((v, i) => languages.indexOf(v) === i)
+      .map((language, i) => {
+        return (
+          <option key={i} value={language || "CSS"}>
+            {language || "CSS"}
+          </option>
+        )
+      })
     return (
       <Layout>
         <SEO title="Github" />
@@ -103,17 +112,10 @@ class Github extends React.Component {
                     <select
                       className="github-filter"
                       onChange={e => this.handleLanguage(e.target.value)}
+                      onBlur={e => this.handleLanguage(e.target.value)}
                     >
                       <option value="all">All Languages</option>
-                      {languages
-                        .filter((v, i) => languages.indexOf(v) === i)
-                        .map((language, i) => {
-                          return (
-                            <option key={i} value={language || "CSS"}>
-                              {language || "CSS"}
-                            </option>
-                          )
-                        })}
+                      {filteredLanguages}
                     </select>
                     <button
                       className="github-filter"

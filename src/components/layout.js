@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Resume from "../../data/James_Kemp_Resume_2019.pdf"
+
 import Header from "./header"
 import IconLinks from "./iconLinks"
 import "../globals.css"
