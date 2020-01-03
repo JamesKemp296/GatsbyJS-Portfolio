@@ -1,7 +1,9 @@
 import React from "react"
-import moment from "moment"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import GithubFilters from "../components/GithubFilters/GithubFilters"
+import GithubRepoCard from "../components/GithubRepoCard/GithubRepoCard"
 import "../globals.css"
 import "./github.css"
 
@@ -98,67 +100,26 @@ class Github extends React.Component {
           <div className="page-content">
             <div className="page-container">
               {!loading && (
-                <div id="github-filters-container">
-                  <input
-                    id="github-search"
-                    type="text"
-                    name="search"
-                    placeholder="Search"
-                    autoComplete="off"
-                    onChange={e => this.handleSearch(e.target.value)}
-                    value={this.state.search}
-                  />
-                  <div id="github-filters">
-                    <select
-                      className="github-filter"
-                      onChange={e => this.handleLanguage(e.target.value)}
-                      onBlur={e => this.handleLanguage(e.target.value)}
-                    >
-                      <option value="all">All Languages</option>
-                      {filteredLanguages}
-                    </select>
-                    <button
-                      className="github-filter"
-                      onClick={this.handleCreated}
-                    >
-                      Created {created ? "(oldest)" : "(newest)"}
-                    </button>
-                    <button
-                      className="github-filter"
-                      onClick={this.handleUpdated}
-                    >
-                      Updated {updated ? "(oldest)" : "(newest)"}
-                    </button>
-                  </div>
-                </div>
+                <GithubFilters
+                  filteredLanguages={filteredLanguages}
+                  search={this.state.search}
+                  created={created}
+                  updated={updated}
+                  handleLanguage={this.handleLanguage}
+                  handleUpdated={this.handleCreated}
+                  handleCreated={this.handleUpdated}
+                />
               )}
               <div id="repos">
                 {filteredRepos.map(repo => (
-                  <a
-                    href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    key={repo.id}
-                  >
-                    <div className="github-card">
-                      <h5>{repo.name}</h5>
-                      <p className="github-text">{repo.language || "CSS"}</p>
-                      <div id="github-dates">
-                        <p className="github-text">
-                          Created:{" "}
-                          {moment(repo.created_at)
-                            .startOf("day")
-                            .fromNow()}
-                        </p>
-                        <p className="github-text">
-                          Updated:{" "}
-                          {moment(repo.updated_at)
-                            .startOf("day")
-                            .fromNow()}
-                        </p>
-                      </div>
-                    </div>
-                  </a>
+                  <GithubRepoCard
+                    id={repo.id}
+                    name={repo.name}
+                    language={repo.language || "CSS"}
+                    url={repo.html_url}
+                    created_at={repo.created_at}
+                    updated_at={repo.updated_at}
+                  />
                 ))}
               </div>
             </div>
