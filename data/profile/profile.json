@@ -1,4 +1,10 @@
-{
-  "title": "James Kemp",
-  "image": "./images/profile.png"
-}
+[
+  {
+    "title": "James Kemp",
+    "image": "./images/profile.png"
+  },
+  {
+    "title": "IDE",
+    "image": "./images/IDE.png"
+  }
+]
