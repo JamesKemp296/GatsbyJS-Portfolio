@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -90,7 +90,9 @@ const About = () => {
                   pushing the boundries of my knowledge.
                 </p>
                 <h2>Full Stack Developer</h2>
+
                 <p className="paragraph">
+                  <Link to="/uses">This is my dev environment</Link>.<br></br>
                   Being a Full Stack Developer means I am capable of building
                   sites that both look fantastic and have fleshed out datamodels
                   on the backend. On the frontend, my primary library of choice
