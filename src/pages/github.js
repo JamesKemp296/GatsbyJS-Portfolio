@@ -106,8 +106,8 @@ class Github extends React.Component {
                   created={created}
                   updated={updated}
                   handleLanguage={this.handleLanguage}
-                  handleUpdated={this.handleCreated}
-                  handleCreated={this.handleUpdated}
+                  handleUpdated={this.handleUpdated}
+                  handleCreated={this.handleCreated}
                 />
               )}
               <div id="repos">
