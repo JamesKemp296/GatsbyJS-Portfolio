@@ -16,6 +16,27 @@ html {
   font-size: 62.5%;
   color: white;
 }
+
+/* ====================SCROLL BAR================== */
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: white rgb(19, 32, 59);
+}
+body::-webkit-scrollbar-track {
+  background: rgb(19, 32, 59);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 6px;
+  border: 3px solid rgb(19, 32, 59);
+}
+
+/* ====================SCROLL BAR================== */
+
 body {
   margin: 0;
   font-size: 1.6rem;
@@ -169,7 +190,6 @@ footer {
 }
 
 #top-btn {
-  transition: all ease-in-out 0.3s;
   border: none;
   background: transparent;
   color: white;
