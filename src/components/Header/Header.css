@@ -41,8 +41,24 @@
   text-transform: uppercase;
 }
 
-.navbar-links li a[aria-current="page"] {
-  border-bottom: 2px solid white;
+.navbar-links li a[aria-current="page"]:after {
+  transition: all ease-in-out 0.3s;
+}
+
+.navbar-links li a[aria-current="page"]:after {
+  position: absolute;
+  height: 2px;
+  margin: 0 auto;
+  content: "";
+  left: 0;
+  right: 0;
+  width: 100%;
+  color: #000;
+  background-color: white;
+  bottom: 1px;
+}
+.navbar-links li a[aria-current="page"]:hover:after {
+  background-color: #183549;
 }
 
 a {
