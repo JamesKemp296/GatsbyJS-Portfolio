@@ -11,7 +11,7 @@ const GithubRepoCard = ({
 }) => {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" key={id}>
-      <div className="github-card">
+      <div className="github-card shadow-pop-tr">
         <h5>{name}</h5>
         <p className="github-text">{language || "CSS"}</p>
         <div id="github-dates">

@@ -90,10 +90,6 @@ button.github-filter:hover {
   margin: 1rem;
 }
 
-.github-card:hover {
-  background: #3b98d1;
-}
-
 .github-text {
   padding: 0;
   margin: 0;
@@ -129,3 +125,58 @@ button.github-filter:hover {
     justify-content: center;
   }
 }
+
+/* ================CARD ANIMATION 1 ============ */
+.shadow-pop-tr {
+  transition: all ease-in-out 0.3s;
+}
+.shadow-pop-tr:hover {
+  -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  transition: all 0.3s ease-in-out;
+}
+
+@-webkit-keyframes shadow-pop-tr {
+  0% {
+    -webkit-box-shadow: 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1,
+      0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1;
+    box-shadow: 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1,
+      0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px #3b98d1, 2px -2px #3b98d1, 3px -3px #3b98d1,
+      4px -4px #3b98d1, 5px -5px #3b98d1, 6px -6px #3b98d1, 7px -7px #3b98d1,
+      8px -8px #3b98d1;
+    box-shadow: 1px -1px #3b98d1, 2px -2px #3b98d1, 3px -3px #3b98d1,
+      4px -4px #3b98d1, 5px -5px #3b98d1, 6px -6px #3b98d1, 7px -7px #3b98d1,
+      8px -8px #3b98d1;
+    -webkit-transform: translateX(-8px) translateY(8px);
+    transform: translateX(-8px) translateY(8px);
+  }
+}
+@keyframes shadow-pop-tr {
+  0% {
+    -webkit-box-shadow: 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1,
+      0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1;
+    box-shadow: 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1,
+      0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px #3b98d1, 2px -2px #3b98d1, 3px -3px #3b98d1,
+      4px -4px #3b98d1, 5px -5px #3b98d1, 6px -6px #3b98d1, 7px -7px #3b98d1,
+      8px -8px #3b98d1;
+    box-shadow: 1px -1px #3b98d1, 2px -2px #3b98d1, 3px -3px #3b98d1,
+      4px -4px #3b98d1, 5px -5px #3b98d1, 6px -6px #3b98d1, 7px -7px #3b98d1,
+      8px -8px #3b98d1;
+    -webkit-transform: translateX(-8px) translateY(8px);
+    transform: translateX(-8px) translateY(8px);
+  }
+}
+
+/* ================CARD ANIMATION 2 ============ */
+
+/* https://animista.net/play/basic/swing/swing-top-right-fwd */
