@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 :root {
+  --primary: #e65f61;
   --main-bg-color: #3b98d1;
   --dark-main-bg-color: rgb(19, 32, 59);
   --content-bg-color: white;
   --dark-content-bg-color: #183549;
   --font-white: white;
   --font-dark: #96f1f2;
+  --green: #7dcc93;
+  --red: #e65f61;
+  --darkblue: #31355b;
 }
 
 html {
@@ -45,7 +49,7 @@ body {
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #3b98d1;
+  background: var(--primary);
   /* background: linear-gradient(270deg, #13828a, #7e4ed4);
   background-size: 400% 400%;
   animation: background-gradient 30s ease infinite;

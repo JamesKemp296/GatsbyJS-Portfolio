@@ -66,7 +66,6 @@ button.github-filter:hover {
 /* ====================CARD============================ */
 
 .github-card {
-  margin: 1rem;
   text-align: center;
   width: 182px;
   min-height: 180px;
@@ -80,7 +79,6 @@ button.github-filter:hover {
   font-size: 1em;
   color: black;
   border: #999999 solid 1px;
-  border-radius: 5px;
   transition: 0.3s;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -93,6 +91,60 @@ button.github-filter:hover {
 .github-text {
   padding: 0;
   margin: 0;
+}
+
+/* ================CARD ANIMATION 1 ============ */
+
+.card-wrapper {
+  position: relative;
+  display: inline-block;
+  background-color: var(--primary);
+  margin: 1rem;
+}
+
+.card-wrapper:before,
+.card-wrapper:after {
+  content: "";
+  display: block;
+  background-color: var(--primary);
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  transition: all 0.15s ease;
+}
+
+.card-wrapper:before {
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: rotate(-45deg) scale(0);
+}
+
+.card-wrapper:after {
+  right: 0;
+  bottom: 0;
+  transform-origin: bottom right;
+  transform: rotate(45deg) scale(0);
+}
+
+.card-inner {
+  display: block;
+  transform: translate(0, 0);
+  transition: all 0.15s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.card-wrapper:hover .card-inner {
+  transform: translate(6px, -6px);
+}
+
+.card-wrapper:hover:before {
+  transform: rotate(-45deg) scale(1);
+}
+
+.card-wrapper:hover:after {
+  transform: rotate(45deg) scale(1);
 }
 
 @media only screen and (max-width: 800px) {
@@ -125,58 +177,3 @@ button.github-filter:hover {
     justify-content: center;
   }
 }
-
-/* ================CARD ANIMATION 1 ============ */
-.shadow-pop-tr {
-  transition: all ease-in-out 0.3s;
-}
-.shadow-pop-tr:hover {
-  -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-  animation: shadow-pop-tr 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-  transition: all 0.3s ease-in-out;
-}
-
-@-webkit-keyframes shadow-pop-tr {
-  0% {
-    -webkit-box-shadow: 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1,
-      0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1;
-    box-shadow: 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1,
-      0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1;
-    -webkit-transform: translateX(0) translateY(0);
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    -webkit-box-shadow: 1px -1px #3b98d1, 2px -2px #3b98d1, 3px -3px #3b98d1,
-      4px -4px #3b98d1, 5px -5px #3b98d1, 6px -6px #3b98d1, 7px -7px #3b98d1,
-      8px -8px #3b98d1;
-    box-shadow: 1px -1px #3b98d1, 2px -2px #3b98d1, 3px -3px #3b98d1,
-      4px -4px #3b98d1, 5px -5px #3b98d1, 6px -6px #3b98d1, 7px -7px #3b98d1,
-      8px -8px #3b98d1;
-    -webkit-transform: translateX(-8px) translateY(8px);
-    transform: translateX(-8px) translateY(8px);
-  }
-}
-@keyframes shadow-pop-tr {
-  0% {
-    -webkit-box-shadow: 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1,
-      0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1;
-    box-shadow: 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1,
-      0 0 #3b98d1, 0 0 #3b98d1, 0 0 #3b98d1;
-    -webkit-transform: translateX(0) translateY(0);
-    transform: translateX(0) translateY(0);
-  }
-  100% {
-    -webkit-box-shadow: 1px -1px #3b98d1, 2px -2px #3b98d1, 3px -3px #3b98d1,
-      4px -4px #3b98d1, 5px -5px #3b98d1, 6px -6px #3b98d1, 7px -7px #3b98d1,
-      8px -8px #3b98d1;
-    box-shadow: 1px -1px #3b98d1, 2px -2px #3b98d1, 3px -3px #3b98d1,
-      4px -4px #3b98d1, 5px -5px #3b98d1, 6px -6px #3b98d1, 7px -7px #3b98d1,
-      8px -8px #3b98d1;
-    -webkit-transform: translateX(-8px) translateY(8px);
-    transform: translateX(-8px) translateY(8px);
-  }
-}
-
-/* ================CARD ANIMATION 2 ============ */
-
-/* https://animista.net/play/basic/swing/swing-top-right-fwd */
