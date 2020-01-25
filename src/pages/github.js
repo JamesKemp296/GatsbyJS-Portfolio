@@ -88,7 +88,7 @@ class Github extends React.Component {
         <article>
           <div className="head-container">
             <a
-              id="github-link"
+              className="title-link"
               href={github.html_url}
               target="_blank"
               rel="noopener noreferrer"

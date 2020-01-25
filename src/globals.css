@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 :root {
-  --primary: #e65f61;
+  --primary: #3b98d1;
+  --secondary: #183448;
   --main-bg-color: #3b98d1;
   --dark-main-bg-color: rgb(19, 32, 59);
   --content-bg-color: white;
@@ -22,7 +23,7 @@ html {
 }
 
 /* ====================SCROLL BAR================== */
-
+/*
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -37,7 +38,7 @@ body::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 6px;
   border: 3px solid rgb(19, 32, 59);
-}
+} */
 
 /* ====================SCROLL BAR================== */
 
@@ -90,7 +91,7 @@ h3,
 h4,
 h5 {
   margin: 2.75rem 0 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.15;
 }
@@ -207,6 +208,18 @@ footer {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+/* ================Link Highlight ============== */
+
+.title-link {
+  margin: 0;
+  padding: 0;
+}
+
+.title-link:hover {
+  color: black;
+  transition: all 0.1s ease-in-out;
 }
 
 @keyframes background-gradient {
