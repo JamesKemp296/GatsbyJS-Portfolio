@@ -23,8 +23,16 @@ const About = () => {
           }
         }
       }
+      allMarkdownRemark {
+        edges {
+          node {
+            html
+          }
+        }
+      }
     }
   `)
+  let languages = data.allMarkdownRemark.edges[0].node.html
   const profile = data.allProfileJson.edges[0].node
   const title = profile.title
   const imageData = profile.image.childImageSharp.fluid
@@ -34,7 +42,14 @@ const About = () => {
       <main>
         <article>
           <div className="head-container">
-            <h1>About James</h1>
+            <a
+              className="title-link"
+              href="https://www.linkedin.com/in/jamesdanielkemp/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h1>About James</h1>
+            </a>
             <h2>Building high-quality websites with robust backends</h2>
           </div>
           <div className="page-content">
@@ -57,21 +72,7 @@ const About = () => {
               </div>
               <div className="about-skills">
                 <h5>My skills are:</h5>
-                <div id="about-skills-list">
-                  <h5>HTML/CSS</h5>
-                  <h5>JavaScript</h5>
-                  <h5>React.js</h5>
-                  <h5>Gatsby.js</h5>
-                  <h5>Node.js</h5>
-                  <h5>Express.js</h5>
-                  <h5>Ruby</h5>
-                  <h5>Rails</h5>
-                  <h5>MongoDB</h5>
-                  <h5>GraphQL</h5>
-                  <h5>MySQL</h5>
-                  <h5>Git</h5>
-                  <h5>Github</h5>
-                </div>
+                <section dangerouslySetInnerHTML={{ __html: languages }} />
                 <p className="paragraph">
                   My name is James Kemp and I am a career changer. I have spent
                   the last 4 years as a chef at Margaritaville. I had a design
