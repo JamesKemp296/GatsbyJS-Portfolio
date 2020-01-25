@@ -3,6 +3,7 @@ const mySkills = [
   "HTML/CSS",
   "JavaScript",
   "React",
+  "React Native",
   "GatsbyJS",
   "Next.js",
   "Node.js",
