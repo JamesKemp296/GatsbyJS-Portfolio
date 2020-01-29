@@ -8,6 +8,7 @@
 #index-content {
   width: 100%;
   padding: 3rem 0;
+  padding-top: 0;
   background: var(--secondary);
   color: black;
 }
@@ -24,15 +25,22 @@
 }
 
 .portfolio-hero h1 {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .wiggle-flex {
   display: flex;
   justify-content: center;
+  transform: skew(-12deg) rotate(-12deg);
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  margin-bottom: 8rem;
+  color: #1d9099;
+  text-shadow: 4px 4px 0 var(--yellow), -4px -4px 0 var(--red);
 }
 
 .portfolio-hero p {
+  font-family: "Roboto Mono", monospace;
   font-size: 2rem;
   margin: 2rem 1rem;
 }
@@ -53,6 +61,7 @@
 }
 
 #portfolio-button-text {
+  font-family: "Roboto Mono", monospace;
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
@@ -100,6 +109,18 @@
   background: black;
 }
 
+#index-breakpoint {
+  background-color: var(--primary);
+  height: 8rem;
+  clip-path: polygon(
+    0 0,
+    /* left top */ 100% 0,
+    /* right top */ 100% 100%,
+    /* right bottom */ 0 0 /* left bottom */
+  );
+  margin-bottom: 3rem;
+}
+
 @media only screen and (max-width: 840px) {
   .portfolio-hero {
     max-width: 500px;
@@ -127,7 +148,7 @@
   }
 
   .portfolio-hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .portfolio-hero p {
@@ -138,6 +159,12 @@
   .project-grid {
     display: flex;
     flex-direction: column;
+  }
+
+  .wiggle-flex {
+    transform: skew(-12deg) rotate(-12deg);
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 2px 0 var(--yellow), -2px -2px 0 var(--red);
   }
 
   #portfolio-button-text {
@@ -185,6 +212,8 @@
 .wiggle:active {
   transition: 0.3s;
   animation: wiggle 1s infinite;
+  text-shadow: 3px 3px 0 #18e657, 6px 6px 0 #bf189b, 9px 9px 0 #ffeb00,
+    12px 12px 0 black;
 }
 .wiggle {
   text-transform: capitalize;

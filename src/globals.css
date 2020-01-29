@@ -1,17 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sarpanch:900");
 
 :root {
-  --primary: #3b98d1;
-  --secondary: #183448;
+  --primary: #183549;
+  --secondary: #132738;
   --main-bg-color: #3b98d1;
   --dark-main-bg-color: rgb(19, 32, 59);
   --content-bg-color: white;
   --dark-content-bg-color: #183549;
   --font-white: white;
   --font-dark: #96f1f2;
+  --yellow: #e79c10;
   --green: #7dcc93;
-  --red: #e65f61;
+  --red: #d53a33;
   --darkblue: #31355b;
+  --blue: #3279dd;
 }
 
 html {
@@ -19,7 +23,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 62.5%;
-  color: white;
+  color: var(--blue);
 }
 
 /* ====================SCROLL BAR================== */
@@ -157,8 +161,8 @@ a {
 .page-content {
   width: 100%;
   padding: 3rem 0;
-  background: white;
-  color: black;
+  background: var(--secondary);
+  color: var(--blue);
 }
 
 .page-container {
@@ -168,7 +172,7 @@ a {
 }
 
 .page-container a {
-  color: #3b98d1;
+  color: var(--yellow);
   text-decoration: underline;
 }
 

@@ -59,7 +59,7 @@ button.github-filter:hover {
   text-align: center;
   width: 182px;
   min-height: 180px;
-  background-color: white;
+  background-color: var(--secondary);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,10 +67,9 @@ button.github-filter:hover {
   font-family: sans-serif;
   line-height: 1.5em;
   font-size: 1em;
-  color: black;
-  border: #999999 solid 1px;
+  color: var(--yellow);
+  border: var(--blue) solid 1px;
   transition: 0.3s;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -88,7 +87,7 @@ button.github-filter:hover {
 .card-wrapper {
   position: relative;
   display: inline-block;
-  background-color: var(--primary);
+  background-color: var(--yellow);
   margin: 1rem;
 }
 
@@ -96,7 +95,7 @@ button.github-filter:hover {
 .card-wrapper:after {
   content: "";
   display: block;
-  background-color: var(--primary);
+  background-color: var(--yellow);
   width: 8px;
   height: 8px;
   position: absolute;
