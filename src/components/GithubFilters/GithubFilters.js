@@ -8,6 +8,7 @@ const GithubFilters = ({
   handleLanguage,
   handleUpdated,
   handleCreated,
+  handleSearch,
 }) => {
   return (
     <div id="github-filters-container">
@@ -17,7 +18,7 @@ const GithubFilters = ({
         name="search"
         placeholder="Search"
         autoComplete="off"
-        onChange={e => this.handleSearch(e.target.value)}
+        onChange={e => handleSearch(e.target.value)}
         value={search}
       />
       <div id="github-filters">
