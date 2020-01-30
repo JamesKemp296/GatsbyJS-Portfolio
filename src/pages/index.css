@@ -162,7 +162,7 @@
   }
 
   .wiggle-flex {
-    transform: skew(-12deg) rotate(-12deg);
+    transform: skew(0deg) rotate(0deg);
     margin-bottom: 2.5rem;
     text-shadow: 2px 2px 0 var(--yellow), -2px -2px 0 var(--red);
   }

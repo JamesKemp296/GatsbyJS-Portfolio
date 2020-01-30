@@ -57,9 +57,6 @@
   background-color: white;
   bottom: 1px;
 }
-.navbar-links li a[aria-current="page"]:hover:after {
-  background-color: #183549;
-}
 
 a {
   color: white;

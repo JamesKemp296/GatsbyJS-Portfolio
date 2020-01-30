@@ -25,6 +25,8 @@
   padding-left: 2rem;
   font-size: 1.6rem;
   margin: 0 1rem;
+  background-color: var(--secondary);
+  border: 1px solid var(--blue);
 }
 
 #github-filters {
@@ -38,9 +40,9 @@
 .github-filter {
   transition: ease-in-out all 0.1s;
   border: none;
-  background: white;
-  border: #999999 solid 1px;
-  color: black;
+  background-color: var(--secondary);
+  border: 1px solid var(--blue);
+  color: var(--white);
   height: 44px;
   font-size: 1.6rem;
   padding: 0 1rem;
@@ -67,14 +69,15 @@ button.github-filter:hover {
   font-family: sans-serif;
   line-height: 1.5em;
   font-size: 1em;
-  color: var(--yellow);
-  border: var(--blue) solid 1px;
+  color: white;
+  border: var(--yellow) solid 1px;
   transition: 0.3s;
   cursor: pointer;
 }
 
 .github-card h5 {
   margin: 1rem;
+  color: var(--yellow);
 }
 
 .github-text {

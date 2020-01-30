@@ -156,13 +156,14 @@ a {
   font-size: 2rem;
   margin: 0;
   padding: 1rem 0 0 0;
+  color: var(--yellow);
 }
 
 .page-content {
   width: 100%;
   padding: 3rem 0;
   background: var(--secondary);
-  color: var(--blue);
+  color: white;
 }
 
 .page-container {
