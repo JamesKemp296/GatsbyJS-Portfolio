@@ -12,30 +12,16 @@ const Header = ({ siteTitle, subTitle }) => {
 
   return (
     <>
-      {!isToggled ? (
-        <a
-          href="#menu"
-          className="toggle-button"
-          onClick={() => setToggled(!isToggled)}
-          onKeyDown={() => setToggled(!isToggled)}
-        >
-          <span className="bar1"></span>
-          <span className="bar2"></span>
-          <span className="bar3"></span>
-        </a>
-      ) : (
-        <a
-          href="#menu"
-          className="toggle-button"
-          id="toggle-x"
-          onClick={() => setToggled(!isToggled)}
-          onKeyDown={() => setToggled(!isToggled)}
-        >
-          <span className="bar1"></span>
-          <span className="bar2"></span>
-          <span className="bar3"></span>
-        </a>
-      )}
+      <a
+        href="#menu"
+        className="toggle-button"
+        onClick={() => setToggled(!isToggled)}
+        onKeyDown={() => setToggled(!isToggled)}
+      >
+        <span className={isToggled ? "bar1-small" : "bar1"}></span>
+        <span className={isToggled ? "bar2-small" : "bar2"}></span>
+        <span className={isToggled ? "bar3-small" : "bar3"}></span>
+      </a>
       <header id="header-main">
         <div id="navbar-main">
           <div id="navbar-title-group">

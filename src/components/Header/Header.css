@@ -113,7 +113,10 @@
 
 .toggle-button .bar1,
 .bar2,
-.bar3 {
+.bar3,
+.bar1-small,
+.bar2-small,
+.bar3-small {
   height: 3px;
   background-color: white;
   border-radius: 10px;
@@ -131,21 +134,15 @@
   width: 75%;
 }
 
-#toggle-x {
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-}
-
-#toggle-x .bar1 {
+.bar1-small {
   width: 40%;
 }
 
-#toggle-x .bar2 {
+.bar2-small {
   width: 75%;
 }
 
-#toggle-x .bar3 {
+.bar3-small {
   width: 50%;
 }
 
@@ -179,6 +176,7 @@
   }
 
   .navbar-links {
+    top: 100px;
     margin-top: 1.5rem;
     display: none;
     width: 100%;
@@ -187,12 +185,15 @@
   #navbar-main {
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
-    padding-top: 2rem;
+    /* justify-content: center; */
+    padding: 0;
+    height: 56px;
   }
 
   #navbar-title-group {
     padding-left: 2rem;
+    position: relative;
+    top: 1rem;
   }
 
   ul.navbar-links {
