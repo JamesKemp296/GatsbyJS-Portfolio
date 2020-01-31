@@ -19,8 +19,8 @@
 }
 
 #github-search {
-  width: 196px;
-  height: 40px;
+  width: 198px;
+  height: 42px;
   padding: 0px;
   padding-left: 2rem;
   font-size: 1.6rem;
@@ -71,7 +71,7 @@ button.github-filter:hover {
   line-height: 1.5em;
   font-size: 1em;
   color: white;
-  border: var(--yellow) solid 1px;
+  border: var(--blue) solid 1px;
   transition: 0.3s;
   cursor: pointer;
 }

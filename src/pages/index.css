@@ -136,6 +136,14 @@
   .portfolio-hero-wrapper {
     height: 350px;
   }
+  #index-breakpoint {
+    clip-path: polygon(
+      0 0,
+      /* left top */ 100% 0,
+      /* right top */ 100% 100%,
+      /* right bottom */ -40% 0 /* left bottom */
+    );
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -165,6 +173,15 @@
     transform: skew(0deg) rotate(0deg);
     margin-bottom: 2.5rem;
     text-shadow: 2px 2px 0 var(--yellow), -2px -2px 0 var(--red);
+  }
+
+  #index-breakpoint {
+    clip-path: polygon(
+      0 0,
+      /* left top */ 100% 0,
+      /* right top */ 100% 100%,
+      /* right bottom */ -60% 0 /* left bottom */
+    );
   }
 
   #portfolio-button-text {

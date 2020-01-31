@@ -10,7 +10,7 @@
 }
 
 .red-span {
-  color: red;
+  color: var(--red);
 }
 
 .field {
@@ -67,6 +67,7 @@
   font-size: 1.6rem;
   font-weight: bold;
   padding: 0 1rem;
+  color: white;
 }
 
 .submit-button {
