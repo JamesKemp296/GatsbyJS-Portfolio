@@ -34,7 +34,13 @@ const Layout = ({ children }) => {
       <div ref={ref}></div>
       <Header siteTitle={title} subTitle={subTitle} />
       <div>
-        <main>{children}</main>
+        <main
+          style={{
+            marginTop: "8rem",
+          }}
+        >
+          {children}
+        </main>
       </div>
       <footer>
         <div id="back-to-top">

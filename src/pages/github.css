@@ -19,12 +19,15 @@
 }
 
 #github-search {
-  width: 196px;
-  height: 40px;
+  width: 198px;
+  height: 42px;
   padding: 0px;
   padding-left: 2rem;
   font-size: 1.6rem;
   margin: 0 1rem;
+  background-color: var(--secondary);
+  border: 1px solid var(--blue);
+  color: white;
 }
 
 #github-filters {
@@ -38,9 +41,9 @@
 .github-filter {
   transition: ease-in-out all 0.1s;
   border: none;
-  background: white;
-  border: #999999 solid 1px;
-  color: black;
+  background-color: var(--secondary);
+  border: 1px solid var(--blue);
+  color: white;
   height: 44px;
   font-size: 1.6rem;
   padding: 0 1rem;
@@ -48,9 +51,9 @@
 }
 
 button.github-filter:hover {
-  color: white;
-  background: black;
-  border: black;
+  color: var(--secondary);
+  background: var(--yellow);
+  border: var(--yellow);
 }
 
 /* ====================CARD============================ */
@@ -59,7 +62,7 @@ button.github-filter:hover {
   text-align: center;
   width: 182px;
   min-height: 180px;
-  background-color: white;
+  background-color: var(--secondary);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,15 +70,15 @@ button.github-filter:hover {
   font-family: sans-serif;
   line-height: 1.5em;
   font-size: 1em;
-  color: black;
-  border: #999999 solid 1px;
+  color: white;
+  border: var(--blue) solid 1px;
   transition: 0.3s;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .github-card h5 {
   margin: 1rem;
+  color: var(--yellow);
 }
 
 .github-text {
@@ -88,7 +91,7 @@ button.github-filter:hover {
 .card-wrapper {
   position: relative;
   display: inline-block;
-  background-color: var(--primary);
+  background-color: var(--yellow);
   margin: 1rem;
 }
 
@@ -96,7 +99,7 @@ button.github-filter:hover {
 .card-wrapper:after {
   content: "";
   display: block;
-  background-color: var(--primary);
+  background-color: var(--yellow);
   width: 8px;
   height: 8px;
   position: absolute;

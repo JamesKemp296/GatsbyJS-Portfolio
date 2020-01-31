@@ -10,7 +10,7 @@
 }
 
 .red-span {
-  color: red;
+  color: var(--red);
 }
 
 .field {
@@ -26,6 +26,9 @@
   padding-left: 2rem;
   font-size: 1.6rem;
   margin: 1rem 0;
+  background-color: var(--secondary);
+  color: white;
+  border: 1px solid var(--blue);
 }
 
 .field label {
@@ -36,6 +39,9 @@
   height: 30vh;
   margin: 1rem 0;
   padding: 2rem;
+  background-color: var(--secondary);
+  color: white;
+  border: 1px solid var(--blue);
 }
 
 ::placeholder {
@@ -57,19 +63,19 @@
 
 .actions input {
   border: none;
-  color: white;
   height: 40px;
   font-size: 1.6rem;
   font-weight: bold;
   padding: 0 1rem;
+  color: white;
 }
 
 .submit-button {
-  background: #3b98d1;
+  background: var(--blue);
 }
 
 .clear-button {
-  background: #de3f44;
+  background: var(--red);
 }
 
 @media only screen and (max-width: 720px) {

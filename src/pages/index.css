@@ -5,9 +5,14 @@
   margin: 0;
 }
 
+.project-grid a {
+  color: white;
+}
+
 #index-content {
   width: 100%;
   padding: 3rem 0;
+  padding-top: 0;
   background: var(--secondary);
   color: black;
 }
@@ -24,15 +29,22 @@
 }
 
 .portfolio-hero h1 {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .wiggle-flex {
   display: flex;
   justify-content: center;
+  transform: skew(-12deg) rotate(-12deg);
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  margin-bottom: 8rem;
+  color: #1d9099;
+  text-shadow: 4px 4px 0 var(--yellow), -4px -4px 0 var(--red);
 }
 
 .portfolio-hero p {
+  font-family: "Roboto Mono", monospace;
   font-size: 2rem;
   margin: 2rem 1rem;
 }
@@ -53,6 +65,8 @@
 }
 
 #portfolio-button-text {
+  color: white;
+  font-family: "Roboto Mono", monospace;
   padding: 0;
   margin: 0;
   font-size: 1.6rem;
@@ -75,6 +89,7 @@
 
 .index-icons a {
   padding: 0 1rem;
+  color: white;
 }
 
 .index-icon:hover {
@@ -96,11 +111,23 @@
 }
 
 #resume-btn:hover {
-  color: white;
-  background: black;
+  color: black;
+  background: var(--yellow);
 }
 
-@media only screen and (max-width: 840px) {
+#index-breakpoint {
+  background-color: var(--primary);
+  height: 8rem;
+  clip-path: polygon(
+    0 0,
+    /* left top */ 100% 0,
+    /* right top */ 100% 100%,
+    /* right bottom */ 0 0 /* left bottom */
+  );
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 845px) {
   .portfolio-hero {
     max-width: 500px;
   }
@@ -113,21 +140,34 @@
   }
 
   .portfolio-hero-wrapper {
-    height: 350px;
+    height: 450px;
+  }
+
+  #portfolio-button {
+    margin-top: 4rem;
+  }
+
+  #index-breakpoint {
+    clip-path: polygon(
+      0 0,
+      /* left top */ 100% 0,
+      /* right top */ 100% 100%,
+      /* right bottom */ -40% 0 /* left bottom */
+    );
   }
 }
 
 @media only screen and (max-width: 720px) {
   .portfolio-hero-wrapper {
     max-height: 36rem;
-    height: 30rem;
+    height: 32rem;
   }
   .portfolio-hero {
     max-width: 450px;
   }
 
   .portfolio-hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .portfolio-hero p {
@@ -138,6 +178,21 @@
   .project-grid {
     display: flex;
     flex-direction: column;
+  }
+
+  .wiggle-flex {
+    transform: skew(0deg) rotate(0deg);
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 2px 0 var(--yellow), -2px -2px 0 var(--red);
+  }
+
+  #index-breakpoint {
+    clip-path: polygon(
+      0 0,
+      /* left top */ 100% 0,
+      /* right top */ 100% 100%,
+      /* right bottom */ -60% 0 /* left bottom */
+    );
   }
 
   #portfolio-button-text {
@@ -185,6 +240,8 @@
 .wiggle:active {
   transition: 0.3s;
   animation: wiggle 1s infinite;
+  text-shadow: 3px 3px 0 #18e657, 6px 6px 0 #bf189b, 9px 9px 0 #ffeb00,
+    12px 12px 0 black;
 }
 .wiggle {
   text-transform: capitalize;
