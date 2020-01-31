@@ -121,7 +121,6 @@ button.github-filter:hover {
 }
 
 .card-inner {
-  display: block;
   transform: translate(0, 0);
   transition: all 0.15s ease;
   position: relative;

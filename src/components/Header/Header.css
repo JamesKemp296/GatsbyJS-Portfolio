@@ -1,6 +1,10 @@
 #header-main {
-  background: transparent;
-  margin-bottom: 1.45rem;
+  background: var(--primary);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 20;
 }
 
 #navbar-main {
@@ -13,6 +17,16 @@
 
 #navbar-title-group {
   max-width: 300px;
+}
+
+#navbar-title-group:hover #navbar-title {
+  text-shadow: -1px 1px 0 var(--yellow);
+  transform: translate(1px, -1px);
+}
+
+#navbar-title-group:hover #navbarsub-title {
+  text-shadow: -1px 1px 0 var(--yellow);
+  transform: translate(1px, -1px);
 }
 
 #navbar-title {
@@ -58,7 +72,7 @@
   bottom: 1px;
 }
 
-a {
+#header-main a {
   color: white;
   text-decoration: none;
   position: relative;
@@ -84,23 +98,55 @@ a {
 }
 
 .toggle-button {
-  position: absolute;
-  top: 1.2rem;
+  position: fixed;
+  top: 0;
   right: 0;
   padding: 2rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
   width: 31px;
   height: 21px;
-  z-index: 2;
+  z-index: 27;
 }
 
-.toggle-button .bar {
+.toggle-button .bar1,
+.bar2,
+.bar3 {
   height: 3px;
-  width: 100%;
   background-color: white;
   border-radius: 10px;
+}
+
+.bar1 {
+  width: 65%;
+}
+
+.bar2 {
+  width: 100%;
+}
+
+.bar3 {
+  width: 75%;
+}
+
+#toggle-x {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+#toggle-x .bar1 {
+  width: 40%;
+}
+
+#toggle-x .bar2 {
+  width: 75%;
+}
+
+#toggle-x .bar3 {
+  width: 50%;
 }
 
 @media only screen and (max-width: 840px) {
@@ -141,7 +187,8 @@ a {
   #navbar-main {
     display: flex;
     flex-direction: column;
-    padding: 3rem 0 0 0;
+    padding: 1rem 0;
+    padding-top: 2rem;
   }
 
   #navbar-title-group {
@@ -153,13 +200,15 @@ a {
     width: 100%;
     flex-direction: column;
     text-align: center;
+    border-bottom: 1px solid var(--blue);
+    border-top: 1px solid var(--blue);
   }
 
   .navbar-links li {
     padding: 1.4rem 1rem;
     font-size: 1.4rem;
-    background: #222222;
-    border-bottom: 1px solid #333333;
+    background: var(--secondary);
+    border-bottom: 1px solid var(--primary);
   }
 
   .navbar-links.active {

@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+.project-grid a {
+  color: white;
+}
+
 #index-content {
   width: 100%;
   padding: 3rem 0;
@@ -61,6 +65,7 @@
 }
 
 #portfolio-button-text {
+  color: white;
   font-family: "Roboto Mono", monospace;
   padding: 0;
   margin: 0;
@@ -84,6 +89,7 @@
 
 .index-icons a {
   padding: 0 1rem;
+  color: white;
 }
 
 .index-icon:hover {
@@ -105,8 +111,8 @@
 }
 
 #resume-btn:hover {
-  color: white;
-  background: black;
+  color: black;
+  background: var(--yellow);
 }
 
 #index-breakpoint {
@@ -121,7 +127,7 @@
   margin-bottom: 3rem;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 845px) {
   .portfolio-hero {
     max-width: 500px;
   }
@@ -134,8 +140,13 @@
   }
 
   .portfolio-hero-wrapper {
-    height: 350px;
+    height: 450px;
   }
+
+  #portfolio-button {
+    margin-top: 4rem;
+  }
+
   #index-breakpoint {
     clip-path: polygon(
       0 0,
@@ -149,7 +160,7 @@
 @media only screen and (max-width: 720px) {
   .portfolio-hero-wrapper {
     max-height: 36rem;
-    height: 30rem;
+    height: 32rem;
   }
   .portfolio-hero {
     max-width: 450px;

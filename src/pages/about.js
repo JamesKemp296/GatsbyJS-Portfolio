@@ -50,7 +50,7 @@ const About = () => {
             >
               <h1>About James</h1>
             </a>
-            <h2>Building high-quality websites with robust backends</h2>
+            <h2>React, Gatsby and GraphQL enthusiast</h2>
           </div>
           <div className="page-content">
             <div className="page-container">
