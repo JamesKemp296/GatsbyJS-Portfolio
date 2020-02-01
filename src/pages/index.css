@@ -28,17 +28,22 @@
   max-width: 600px;
 }
 
+.hero-title-wrapper {
+  display: flex;
+  justify-content: center;
+  transform: skew(-12deg) rotate(-12deg);
+  margin-bottom: 8rem;
+}
+
 .portfolio-hero h1 {
   font-size: 6rem;
 }
 
-.wiggle-flex {
+.hero-letters {
   display: flex;
   justify-content: center;
-  transform: skew(-12deg) rotate(-12deg);
   grid-area: text;
   font-family: "Sarpanch", sans-serif;
-  margin-bottom: 8rem;
   color: #1d9099;
   text-shadow: 4px 4px 0 var(--yellow), -4px -4px 0 var(--red);
 }
@@ -132,7 +137,7 @@
     max-width: 500px;
   }
   .portfolio-hero h1 {
-    font-size: 3.5rem;
+    font-size: 6rem;
   }
 
   .portfolio-hero p {
@@ -145,6 +150,16 @@
 
   #portfolio-button {
     margin-top: 4rem;
+  }
+
+  .hero-title-wrapper {
+    transform: skew(0deg) rotate(0deg);
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .hero-letters {
+    text-shadow: 3px 3px 0 var(--yellow), -3px -3px 0 var(--red);
   }
 
   #index-breakpoint {
@@ -167,7 +182,7 @@
   }
 
   .portfolio-hero h1 {
-    font-size: 2.2rem;
+    font-size: 4rem;
   }
 
   .portfolio-hero p {
@@ -180,9 +195,11 @@
     flex-direction: column;
   }
 
-  .wiggle-flex {
-    transform: skew(0deg) rotate(0deg);
-    margin-bottom: 2.5rem;
+  .hero-title-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .hero-letters {
     text-shadow: 2px 2px 0 var(--yellow), -2px -2px 0 var(--red);
   }
 
