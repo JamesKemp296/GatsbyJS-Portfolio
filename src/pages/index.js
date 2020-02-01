@@ -41,20 +41,30 @@ const IndexPage = () => {
   }
 
   const projects = data.allProjectsJson.edges
-  const hero = "Full-Stack Developer".split("")
+  const fullStack = "Full-Stack".split("")
+  const developer = " Developer".split("")
   return (
     <Layout>
       <SEO title="Portfolio" />
       <div className="container">
         <div className="portfolio-hero-wrapper">
           <div className="portfolio-hero">
-            <h1 className="wiggle-flex">
-              {hero.map((letter, i) => (
-                <span key={i} className="wiggle">
-                  {letter === " " ? "\xa0" : letter}
-                </span>
-              ))}
-            </h1>
+            <div className="hero-title-wrapper">
+              <h1 className="hero-letters">
+                {fullStack.map((letter, i) => (
+                  <span key={i} className="wiggle">
+                    {letter === " " ? "\xa0" : letter}
+                  </span>
+                ))}
+              </h1>
+              <h1 className="hero-letters">
+                {developer.map((letter, i) => (
+                  <span key={i} className="wiggle">
+                    {letter === " " ? "\xa0" : letter}
+                  </span>
+                ))}
+              </h1>
+            </div>
             <p>
               Creating beautiful, highly interactive user interfaces in ReactJS
               with powerful and robust backends.

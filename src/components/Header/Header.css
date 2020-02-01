@@ -118,32 +118,38 @@
 .bar2-small,
 .bar3-small {
   height: 3px;
-  background-color: white;
   border-radius: 10px;
+  transition: all 0.1s ease-in-out;
 }
 
 .bar1 {
   width: 65%;
+  background-color: white;
 }
 
 .bar2 {
   width: 100%;
+  background-color: white;
 }
 
 .bar3 {
   width: 75%;
+  background-color: white;
 }
 
 .bar1-small {
   width: 40%;
+  background-color: var(--blue);
 }
 
 .bar2-small {
   width: 75%;
+  background-color: var(--blue);
 }
 
 .bar3-small {
   width: 50%;
+  background-color: var(--blue);
 }
 
 @media only screen and (max-width: 840px) {
