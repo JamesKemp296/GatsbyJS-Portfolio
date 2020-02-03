@@ -52,13 +52,11 @@ const Contact = () => {
         ...formErrors,
         email: "Improper email",
       })
-      console.log("email", formErrors.email)
     } else if (!input.email) {
       setFormErrors({
         ...formErrors,
         email: "Email is required",
       })
-      console.log("email", formErrors.email)
     } else {
       setFormErrors({
         ...formErrors,
@@ -69,9 +67,6 @@ const Contact = () => {
 
   const validateMessage = () => {
     const worldLength = input.message.split(" ").length
-    console.log(worldLength)
-    console.log(input.message.length)
-    console.log(formErrors)
     if (input.message.length > 2000) {
       setFormErrors({
         ...formErrors,
