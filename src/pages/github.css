@@ -32,6 +32,8 @@
 
 #github-filters {
   margin-right: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 ::placeholder {

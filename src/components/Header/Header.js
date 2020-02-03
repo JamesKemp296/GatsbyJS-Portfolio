@@ -14,7 +14,7 @@ const Header = ({ siteTitle, subTitle }) => {
     <>
       <a
         href="#menu"
-        className="toggle-button"
+        className="toggle-button no-select"
         onClick={() => setToggled(!isToggled)}
         onKeyDown={() => setToggled(!isToggled)}
       >
@@ -25,7 +25,7 @@ const Header = ({ siteTitle, subTitle }) => {
       <header id="header-main">
         <div id="navbar-main">
           <div id="navbar-title-group">
-            <Link to="/">
+            <Link to="/" className="no-select">
               <h1 id="navbar-title">{siteTitle}</h1>
               <h4 id="navbarsub-title">{subTitle}</h4>
             </Link>

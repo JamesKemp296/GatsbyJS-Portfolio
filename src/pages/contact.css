@@ -55,7 +55,6 @@
   margin: 0;
   margin-right: auto;
 }
-
 .actions li {
   list-style-type: none;
   margin-right: 1rem;
@@ -76,6 +75,11 @@
 
 .clear-button {
   background: var(--red);
+}
+
+.submit-button:hover,
+.clear-button:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 720px) {

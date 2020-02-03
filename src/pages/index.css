@@ -106,18 +106,37 @@
 }
 
 #resume-btn {
+  position: relative;
   background: white;
   color: black;
   text-transform: uppercase;
   font-weight: bold;
   padding: 1rem;
   border: 0;
-  z-index: 5;
+  z-index: 1;
 }
 
 #resume-btn:hover {
-  color: black;
-  background: var(--yellow);
+  cursor: pointer;
+}
+
+#resume-btn::before {
+  content: "";
+  background-color: var(--yellow);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.1s ease-in-out;
+}
+
+#resume-btn:hover::before,
+#resume-btn:hover::before {
+  transform: scaleX(1);
 }
 
 #index-breakpoint {

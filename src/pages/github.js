@@ -77,7 +77,7 @@ class Github extends React.Component {
       .filter((v, i) => languages.indexOf(v) === i)
       .map((language, i) => {
         return (
-          <option key={i} value={language || "CSS"}>
+          <option key={i + "filter"} value={language || "CSS"}>
             {language || "CSS"}
           </option>
         )
@@ -112,8 +112,9 @@ class Github extends React.Component {
                 />
               )}
               <div id="repos">
-                {filteredRepos.map(repo => (
+                {filteredRepos.map((repo, i) => (
                   <GithubRepoCard
+                    key={`${i}card`}
                     id={repo.id}
                     name={repo.name}
                     language={repo.language || "CSS"}
