@@ -59,7 +59,7 @@ const IndexPage = () => {
               </h1>
               <h1 className="hero-letters">
                 {developer.map((letter, i) => (
-                  <span key={i} className="wiggle">
+                  <span key={i + "dev"} className="wiggle">
                     {letter === " " ? "\xa0" : letter}
                   </span>
                 ))}
