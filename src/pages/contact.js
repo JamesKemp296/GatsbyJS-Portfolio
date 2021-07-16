@@ -28,6 +28,8 @@ const Contact = () => {
     validateMessage()
   }
 
+  const handleInputClear = () => setInput(INITIAL_STATE)
+
   const validateName = () => {
     if (input.name.length > 200) {
       setFormErrors({
@@ -104,6 +106,7 @@ const Contact = () => {
             formErrors={formErrors}
             validateEmail={validateEmail}
             validateName={validateName}
+            handleInputClear={handleInputClear}
           />
         </div>
       </div>

@@ -7,6 +7,7 @@ const ContactForm = ({
   isInvalid,
   handleInputChange,
   formErrors,
+  handleInputClear,
 }) => {
   return (
     <form
@@ -82,7 +83,12 @@ const ContactForm = ({
           />
         </li>
         <li>
-          <input type="reset" value="CLEAR" className="clear-button" />
+          <input
+            type="reset"
+            value="CLEAR"
+            className="clear-button"
+            onClick={handleInputClear}
+          />
         </li>
       </ul>
     </form>
