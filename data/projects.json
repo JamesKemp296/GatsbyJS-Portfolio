@@ -15,7 +15,7 @@
     "slug": "greenlink",
     "url": "https://youtu.be/QqpUwdHe5RQ",
     "image": "./images/greenlink.png",
-    "description": "We built this site to help reduce the total consumption of energy accross the state of florida.",
+    "description": "We built this site to help reduce the total consumption of energy across the state of florida.",
     "tech": "ReactJs, Ruby on Rails, JavaScript, PostgreSQL, Redis, Sidekiq, Selenium, Web Scraping",
     "github": "https://github.com/JamesKemp296/GreenLink"
   },
