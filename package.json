@@ -19,7 +19,7 @@
     "gatsby-source-filesystem": "^2.1.36",
     "gatsby-source-graphql": "^2.1.28",
     "gatsby-transformer-json": "^2.2.20",
-    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.3",
     "moment": "^2.24.0",
     "prismjs": "^1.19.0",
